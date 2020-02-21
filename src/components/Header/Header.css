@@ -1,0 +1,98 @@
+.Header {
+	width: 100%;
+	height: 100px;
+	background-color: var(--color-main);
+}
+
+.Header__container {
+	height: 100%;
+	width: 90%;
+	margin: 0 auto;
+	display: block;
+}
+
+.Header__logo {
+	height: 100%;
+	float: left;
+	display: table;
+}
+
+.Header__logo > h1 {
+	width: auto;
+	color: var(--color-comp-w);
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.logo {
+	height: 17%;
+}
+
+.navbar {
+	float: right;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.navbar a {
+	display: table;
+	padding: 0 20px;
+}
+
+.navbar a:last-child {
+	padding-right: 0;
+}
+
+.navbar a li {
+	color: var(--color-comp-w);
+	font-size: 14px;
+	font-weight: 600;
+}
+
+@media only screen and (min-width: 576px) {
+	.Header {
+		height: 90px;
+	}
+
+	.Header__container {
+		width: 85%;
+	}
+
+	.navbar {
+		float: right;
+		height: 100%;
+		display: table;
+	}
+
+	.navbar a {
+		height: 100%;
+		display: table;
+		float: left;
+		padding: 0px 15px;
+	}
+
+	.navbar a li {
+		display: table-cell;
+		vertical-align: middle;
+		height: 100%;
+		color: var(--color-comp-w);
+		font-size: 16px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.Header__container {
+		width: 60%;
+	}
+
+	.navbar a {
+		padding: 0px 20px;
+	}
+
+	.logo {
+		height: 19%;
+	}
+}

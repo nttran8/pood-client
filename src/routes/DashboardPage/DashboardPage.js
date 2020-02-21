@@ -5,12 +5,12 @@ import React, { Component } from "react";
 import Dashboard from "../../components/Dashboard/Dashboard";
 
 // Data
-import LogListContext from "../../contexts/LogListContext";
+import PoodContext from "../../contexts/PoodContext";
 
 
 export default class DashboardPage extends Component {
   // Set context for class
-  static contextType = LogListContext;
+  static contextType = PoodContext;
 
   componentDidMount() {
     this.context.clearError();

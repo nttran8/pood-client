@@ -1,17 +1,19 @@
 // Libraries
 import React from "react";
-import { format as formatDate } from "date-fns";
+import moment from "moment";
 
-export function CreateDate({ date, format = "EEEE, MMMM d, yyyy" }) {
-  return formatDate(date, format);
+import './Utils.css';
+
+export function CreateDate(date, format = "dddd, MMMM do, YYYY" ) {
+  return moment(date).format(format);
 }
 
-export function CreateTimestamp({ date, format = "MMMM d, hh:mm aaaa" }) {
-  return formatDate(date, format);
+export function CreateTimestamp(date, format = "MMMM do, h:mm a") {
+  return moment(date).format(format);
 }
 
 export function CreateInput({ className, ...props }) {
-  return <input className={["Input", className].join(" ")} {...props} />;
+  return <input className={["input", className].join(" ")} {...props} />;
 }
 
 export function CreateRequired({ className, ...props }) {

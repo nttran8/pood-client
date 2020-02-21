@@ -3,27 +3,18 @@ import React, { Component } from "react";
 import { CreateDate } from "../Utils/Utils";
 
 // Data
-import LogListContext from "../../contexts/LogListContext";
+import PoodContext from "../../contexts/PoodContext";
 
 import "./LogItem.css";
 
 export default class LogList extends Component {
-  static contextType = LogListContext;
+  static contextType = PoodContext;
 
-  handleLogClick = e => {
-    const { logList } = this.context;
-    const foundLog = logList.find(log => log.id === e.currentTarget.id);
-    // const foundLog = this.context.LogList.find(
-    //   log => log.id === e.currentTarget.id
-    // );
-    console.log(foundLog);
-    // this.context.setLog({});
-  };
 
   render() {
     const { log } = this.props;
     return (
-      <li id={log.id} onClick={this.handleLogClick}>
+      <li id={log.id}>
         <header className="LogList__header">
           <h2 className="LogList__nickname">{log.nickname}</h2>
         </header>
@@ -38,7 +29,7 @@ export default class LogList extends Component {
 function LogDate({ log }) {
   return (
     <span className="LogList__date">
-      <CreateDate date={log.date_created} />
+      {CreateDate(log.date_created)}
     </span>
   );
 }

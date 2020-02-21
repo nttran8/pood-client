@@ -1,0 +1,46 @@
+.Header {
+	display: none;
+}
+
+.LoginForm__logoBox {
+	margin: 30px 0 50px 0;
+}
+.LoginForm__logo {
+	width: 40%;
+}
+
+@media only screen and (min-width: 576px) {
+	.App {
+		background-image: var(--print);
+		background-color: var(--color-comp-w);
+	}
+
+	.Header {
+		display: block;
+	}
+
+	.LoginForm__logoBox {
+		display: none;
+	}
+
+	.LoginForm {
+		margin-top: 50px;
+		width: 220px;
+		height: 270px;
+	}
+
+	.formBox {
+		width: 200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.LoginForm {
+		width: 350px;
+	}
+	.formBox {
+		width: 290px;
+	}
+}

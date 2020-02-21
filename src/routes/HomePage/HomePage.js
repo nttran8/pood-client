@@ -1,11 +1,15 @@
 // Libraries
 import React, { Component } from 'react';
 
+// Service
+import TokenService from '../../services/token-service';
+
 // Component
 import LoginForm from '../../components/LoginForm/LoginForm';
 
-// Data
-import store from '../../store';
+// Style
+import './HomePage.css';
+import dooerImg from '../../img/Dooers.svg';
 
 
 export default class HomePage extends Component {
@@ -16,7 +20,7 @@ export default class HomePage extends Component {
     }
   };
 
-  handleLoginRedirect = () => {
+  handleLoginRedirect = (userToken) => {
     // Render dashboard if login is successful
     const { location, history } = this.props;
     const destination = (location.state || {}).from || '/dashboard';
@@ -31,21 +35,25 @@ export default class HomePage extends Component {
 
   loggedIn = () => {
     // Check if user is logged in
-    if(store.user.name === 'nt') {
-      return true;
-    }
+    // if(user.name === 'nt') {
+    //   return true;
+    // }
     return false;
   };
 
   render() {
     return (
       <section className="HomePage">
-        <h2>Our vision: A world of doo-ers.
-        </h2>
-        {this.loggedIn()
-        ? <img alt="poo'd logo"/>
-        : <LoginForm onLogin={this.handleLoginRedirect} onRegister={this.handleRegistrationRedirect}/> 
-        }
+        <div className="Page__left sec">
+          <p>Our vision is to inspire and unite a world of doo-ers.</p>
+          <img className="vision" src={dooerImg} alt="friends high fiving"/>
+        </div>
+        <div className="Page__right sec">
+          {TokenService.hasAuthToken()
+          ? <img alt="poo'd logo"/>
+          : <LoginForm onLogin={this.handleLoginRedirect} onRegister={this.handleRegistrationRedirect}/> 
+          }
+        </div>
       </section>
     );
   }

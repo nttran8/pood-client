@@ -1,0 +1,34 @@
+.App,
+.root,
+.DashboardPage,
+.DashboardPage__left,
+.DashboardPage__right {
+	height: 100%;
+}
+
+#Header {
+	display: block;
+}
+
+.logButton {
+	width: 200px;
+}
+
+.Dashboard {
+	margin: 10px 15px 0 15px;
+}
+
+@media only screen and (min-width: 576px) {
+	.Dashboard {
+		margin: 10px 0 0 0;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.Dashboard {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		margin: 5% 0 0 0;
+	}
+}

@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 
 // Context provider
-import { LogListProvider } from "./contexts/LogListContext";
+import { PoodProvider } from "./contexts/PoodContext";
 
 // Component and style
 import "./index.css";
@@ -12,9 +12,9 @@ import App from "./components/App/App";
 
 ReactDOM.render(
   <BrowserRouter>
-    <LogListProvider>
+    <PoodProvider>
       <App />
-    </LogListProvider>
+    </PoodProvider>
   </BrowserRouter>,
   document.getElementById("root")
 );

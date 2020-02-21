@@ -1,0 +1,74 @@
+.RegistrationPage {
+	padding: 25px 25px 20px 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.sec {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Page__left {
+	display: none;
+}
+
+@media only screen and (min-width: 576px) {
+	.RegistrationPage {
+		padding: 60px 10px 20px 10px;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	.Page__left {
+		display: block;
+	}
+
+	.Page__left > p {
+		font-size: 23px;
+		width: 40vw;
+		text-align: left;
+	}
+
+	.vision {
+		margin-top: 50px;
+		width: 40vw;
+	}
+
+	.Page__right {
+		width: 40vw;
+		height: 100vh;
+		gap: 7rem;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.RegistrationPage {
+		padding: 50px 20px 20px 20px;
+		justify-content: space-evenly;
+	}
+
+	.Page__left {
+		margin-left: 40px;
+	}
+
+	.Page__left > p {
+		font-size: 25px;
+		font-weight: 600;
+		width: 40vw;
+	}
+
+	.vision {
+		position: relative;
+		left: 13%;
+		bottom: 18%;
+		width: 35vw;
+	}
+
+	.Page__right {
+		padding: 0 2rem;
+		gap: 7rem;
+	}
+}

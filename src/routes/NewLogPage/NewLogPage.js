@@ -1,23 +1,35 @@
 // Libraries
 import React, { Component } from 'react';
 
-import { CreateTimestamp } from '../../components/Utils/Utils';
-
 // Component
 import LogForm from '../../components/LogForm/LogForm';
 
 export default class NewLogPage extends Component {
+  static defaultProps = {
+    location: {},
+    history: {
+      push: () => {}
+    }
+  };
+
   state = {
     logDate: Date.now()
+  };
+
+  handleAddRedirect = () => {
+    // Render dashboard if add is successful
+    const { location, history } = this.props;
+    const destination = (location.state || {}).from || '/dashboard';
+    history.push(destination);
   };
 
   render() {
     return (
       <section className='NewLogPage'>
         <h2>
-          <CreateTimestamp date={this.state.logDate}/>
+          Log the Log
         </h2>
-          <LogForm />
+          <LogForm onSuccess={this.handleAddRedirect}/>
       </section>
     );
   }
