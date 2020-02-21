@@ -8,7 +8,7 @@ import IdleService from './idle-service';
 const ApiService = {
   // Log user in session
   postLogin(credentials) {
-    return fetch(`${config.API_ENDPOINT}/auth/login`, {
+    return fetch(`${config.API_ENDPOINT}/api/auth/login`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -34,7 +34,7 @@ const ApiService = {
   },
   // Refresh session
   postRefresh() {
-    return fetch(`${config.API_ENDPOINT}/auth/refresh`, {
+    return fetch(`${config.API_ENDPOINT}/api/auth/refresh`, {
       method: 'POST',
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`
@@ -62,7 +62,7 @@ const ApiService = {
   },
   // needs edit of the body
   getUserLogs() {
-    return fetch(`${config.API_ENDPOINT}/logs`, {
+    return fetch(`${config.API_ENDPOINT}/api/logs`, {
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`
       }
@@ -75,7 +75,7 @@ const ApiService = {
   },
   // Register user
   postUser(newUser) {
-    return fetch(`${config.API_ENDPOINT}/users`, {
+    return fetch(`${config.API_ENDPOINT}/api/users`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -90,7 +90,7 @@ const ApiService = {
   },
   // Purge user account
   deleteUser(userId) {
-    return fetch(`${config.API_ENDPOINT}/users/${userId}`, {
+    return fetch(`${config.API_ENDPOINT}/api/users/${userId}`, {
       method: 'DELETE',
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`
@@ -104,7 +104,7 @@ const ApiService = {
   },
   // Edit user account
   patchUser(user) {
-    return fetch(`${config.API_ENDPOINT}/users/${user.id}`, {
+    return fetch(`${config.API_ENDPOINT}/api/users/${user.id}`, {
       method: 'PATCH',
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`,
@@ -120,7 +120,7 @@ const ApiService = {
   },
   // Add log
   postLog(log) {
-    return fetch(`${config.API_ENDPOINT}/logs`, {
+    return fetch(`${config.API_ENDPOINT}/api/logs`, {
       method: 'POST',
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`,
@@ -136,7 +136,7 @@ const ApiService = {
   },
   // Remove log
   deleteLog(logId) {
-    return fetch(`${config.API_ENDPOINT}/logs/${logId}`, {
+    return fetch(`${config.API_ENDPOINT}/api/logs/${logId}`, {
       method: 'DELETE',
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`
@@ -150,7 +150,7 @@ const ApiService = {
   },
   // Edit log
   patchLog(log) {
-    return fetch(`${config.API_ENDPOINT}/logs/${log.id}`, {
+    return fetch(`${config.API_ENDPOINT}/api/logs/${log.id}`, {
       method: 'PATCH',
       headers: {
         'Authorization': `bearer ${TokenService.getAuthToken()}`,

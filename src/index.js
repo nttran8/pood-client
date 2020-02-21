@@ -10,7 +10,6 @@ import { PoodProvider } from "./contexts/PoodContext";
 import "./index.css";
 import App from "./components/App/App";
 
-console.log(process.env);
 ReactDOM.render(
   <BrowserRouter>
     <PoodProvider>

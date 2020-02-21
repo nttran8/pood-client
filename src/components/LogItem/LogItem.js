@@ -16,7 +16,8 @@ export default class LogList extends Component {
     return (
       <li id={log.id}>
         <header className="LogList__header">
-          <h2 className="LogList__nickname">{log.nickname}</h2>
+          <span className="LogList__nickname">{log.nickname}</span>
+          <i className="fas fa-poop"></i>
         </header>
         <footer className="LogList__footer">
           <LogDate log={log} />

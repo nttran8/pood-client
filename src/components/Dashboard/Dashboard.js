@@ -22,10 +22,15 @@ export default class Dashboard extends Component {
   };
 
   handleLogClick = (event) => {
-    const clickedId = Number(event.target.closest('li').id);
-    const log = this.context.logList.find(log => log.id === clickedId);
-    this.context.setLog(log);
-    this.setState({ expanded: true });
+    // Expand item in detail when clicked
+    if (event.target.closest('li') !== null) {
+      const clickedId = Number(event.target.closest('li').id);
+      const log = this.context.logList.find(log => log.id === clickedId);
+      this.context.setLog(log);
+      this.setState({ expanded: true });
+    }
+    // Does nothing if clicking in between each item
+    else return null;
   };
 
   renderLogList = () => {

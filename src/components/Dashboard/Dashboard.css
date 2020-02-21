@@ -18,9 +18,45 @@
 	margin: 10px 15px 0 15px;
 }
 
+ul {
+	position: relative;
+	width: 80vw;
+	margin: 10px auto;
+	padding: 0px;
+}
+
+ul li {
+	background: rgba(255, 255, 255, .1);
+	color: var(--color-comp-w);
+	transition: .6s;
+	padding: 10px 20px;
+	margin: 6px 0;
+	text-align: left;
+}
+
+ul li:hover {
+	background: var(--color-comp-y);
+	transform: scale(1.02);
+	color: var(--color-triad-b);
+	cursor: pointer;
+}
+
 @media only screen and (min-width: 576px) {
 	.Dashboard {
 		margin: 10px 0 0 0;
+	}
+
+	ul {
+		width: 70vw;
+	}
+
+	ul li {
+		background: rgba(7, 59, 76, .8);
+		color: var(--color-comp-w);
+		transition: .6s;
+		padding: 10px 20px;
+		margin: 6px 0;
+		text-align: left;
 	}
 }
 
@@ -31,4 +67,9 @@
 		justify-content: space-evenly;
 		margin: 5% 0 0 0;
 	}
+
+	ul {
+		width: 30vw;
+	}
+
 }

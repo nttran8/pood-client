@@ -7,6 +7,16 @@ import { CreateInput, CreateButton, CreateTextarea, CreateTimestamp } from "../U
 
 // Data
 import PoodContext from "../../contexts/PoodContext";
+import type1 from "../../img/type1.svg";
+import type2 from "../../img/type2.svg";
+import type3 from "../../img/type3.svg";
+import type4 from "../../img/type4.svg";
+import type5 from "../../img/type5.svg";
+import type6 from "../../img/type6.svg";
+import type7 from "../../img/type7.svg";
+
+// Style
+import './LogView.css';
 
 export default class LogForm extends Component {
   static contextType = PoodContext;
@@ -74,22 +84,25 @@ export default class LogForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmit}>
-        <p>
+      <form className='LogView' onSubmit={this.onSubmit}>
+        <p className='timestamp'>
           {this.context.log 
             ? CreateTimestamp(this.context.log.date_created) 
             : null}
         </p>
-        <label htmlFor='nickname'>nickname</label>
-        <CreateInput 
-          className='nickname' 
-          id='nickname'
-          defaultValue={this.context.log ? this.context.log.nickname : ''}
-          onChange={this.context.updateNickname}
-        />
-        <label htmlFor='nickname'></label>
+
+        <div className='inputForm'>
+          <label htmlFor='nickname'>Nickname</label>
+          <CreateInput 
+            className='nickname' 
+            id='nickname'
+            defaultValue={this.context.log ? this.context.log.nickname : ''}
+            onChange={this.context.updateNickname}
+          />
+        </div>
+        
+        <label name="style">Appearance</label>
         <div className="style">
-          <label name="style">Appearance</label>
           <label>
               <input 
                 type="radio" 
@@ -98,7 +111,7 @@ export default class LogForm extends Component {
                 checked={this.context.log && this.context.log.style === '1'}
                 onChange={this.context.updateStyle}
               />
-              <img src="http://placehold.it/40x60/0bf/fff&text=1" />
+              <img src={type1} alt='type 1: separate hard lumps' />
           </label>
           <label>
               <input 
@@ -108,7 +121,7 @@ export default class LogForm extends Component {
                 checked={this.context.log && this.context.log.style === '2'}
                 onChange={this.context.updateStyle}
               />
-              <img src="http://placehold.it/40x60/0bf/fff&text=2" />
+              <img src={type2} alt='type 2: lumpy and sausage like'/>
           </label>
           <label>
               <input 
@@ -118,7 +131,7 @@ export default class LogForm extends Component {
                 checked={this.context.log && this.context.log.style === '3'}
                 onChange={this.context.updateStyle}
               />
-              <img src="http://placehold.it/40x60/0bf/fff&text=3" />
+              <img src={type3} alt='type 3: sausage shape with cracks' />
           </label>
           <label>
               <input 
@@ -128,7 +141,7 @@ export default class LogForm extends Component {
                 checked={this.context.log && this.context.log.style === '4'}
                 onChange={this.context.updateStyle}
               />
-              <img src="http://placehold.it/40x60/0bf/fff&text=4" />
+              <img src={type4} alt='type 4: smooth soft sausage' />
           </label>
           <label>
               <input 
@@ -138,7 +151,7 @@ export default class LogForm extends Component {
                 checked={this.context.log && this.context.log.style === '5'}
                 onChange={this.context.updateStyle}
               />
-              <img src="http://placehold.it/40x60/0bf/fff&text=5" />
+              <img src={type5} alt='type 5: soft blobs with clear edges'/>
           </label>
           <label>
               <input 
@@ -148,7 +161,7 @@ export default class LogForm extends Component {
                 checked={this.context.log && this.context.log.style === '6'}
                 onChange={this.context.updateStyle}
               />
-              <img src="http://placehold.it/40x60/0bf/fff&text=6" />
+              <img src={type6} alt='type 6: mushy consistency'/>
           </label>
           <label>
               <input 
@@ -158,11 +171,13 @@ export default class LogForm extends Component {
                 checked={this.context.log && this.context.log.style === '7'}
                 onChange={this.context.updateStyle}
               />
-              <img src="http://placehold.it/40x60/0bf/fff&text=7" />
+              <img src={type7} alt='type 7: liquid consistency' />
           </label>
         </div>
+
+
+        <label name="color">Color</label>
         <div className="color">
-          <label name="color">Color</label>
           <label>
               <input 
                 type="radio" 
@@ -171,7 +186,7 @@ export default class LogForm extends Component {
                 checked={this.context.log && this.context.log.color === 'gray'}
                 onChange={this.context.updateColor}
               />
-              <img src="http://placehold.it/40x60/D2D7D3/fff" />
+              <img src="http://placehold.it/40x60/D2D7D3/fff" alt='gray' />
           </label>
           <label>
               <input 
@@ -181,7 +196,7 @@ export default class LogForm extends Component {
                 checked={this.context.log && this.context.log.color === 'red'}
                 onChange={this.context.updateColor}
               />
-              <img src="http://placehold.it/40x60/D24D57/fff" />
+              <img src="http://placehold.it/40x60/D24D57/fff" alt='red'/>
           </label>
           <label>
               <input 
@@ -191,7 +206,7 @@ export default class LogForm extends Component {
                 checked={this.context.log && this.context.log.color === 'yellow'}
                 onChange={this.context.updateColor}
               />
-              <img src="http://placehold.it/40x60/F3C13A/fff" />
+              <img src="http://placehold.it/40x60/F3C13A/fff" alt='yellow' />
           </label>
           <label>
               <input 
@@ -201,7 +216,7 @@ export default class LogForm extends Component {
                 checked={this.context.log && this.context.log.color === 'green'}
                 onChange={this.context.updateColor}
               />
-              <img src="http://placehold.it/40x60/006442/fff" />
+              <img src="http://placehold.it/40x60/006442/fff" alt='green' />
           </label>
           <label>
               <input 
@@ -211,7 +226,7 @@ export default class LogForm extends Component {
                 checked={this.context.log && this.context.log.color === 'brown'}
                 onChange={this.context.updateColor}
               />
-              <img src="http://placehold.it/40x60/964B00/fff" />
+              <img src="http://placehold.it/40x60/964B00/fff" alt='brown' />
           </label>
           <label>
               <input 
@@ -221,11 +236,12 @@ export default class LogForm extends Component {
                 checked={this.context.log && this.context.log.color === 'black'}
                 onChange={this.context.updateColor}
               />
-              <img src="http://placehold.it/40x60/000000/fff" />
+              <img src="http://placehold.it/40x60/000000/fff" alt='black' />
           </label>
         </div>
+
+        <label name="amount ">Amount</label>
         <div className="amount">
-          <label name="amount">Amount</label>
           <label>
               <input 
                 type="radio" 
@@ -234,7 +250,7 @@ export default class LogForm extends Component {
                 checked={this.context.log && this.context.log.amount === 'little'}
                 onChange={this.context.updateAmount}
               />
-              <img src="http://placehold.it/40x60/0bf/fff&text=little" />
+              <img src="http://placehold.it/40x60/0bf/fff&text=little" alt='little' />
           </label>
           <label>
               <input 
@@ -244,7 +260,7 @@ export default class LogForm extends Component {
                 checked={this.context.log && this.context.log.amount === 'normal'}
                 onChange={this.context.updateAmount}
               />
-              <img src="http://placehold.it/40x60/0bf/fff&text=normal" />
+              <img src="http://placehold.it/40x60/0bf/fff&text=normal"  alt='normal' />
           </label>
           <label>
               <input 
@@ -254,9 +270,10 @@ export default class LogForm extends Component {
                 checked={this.context.log && this.context.log.amount === 'a lot'}
                 onChange={this.context.updateAmount}
               />
-              <img src="http://placehold.it/40x60/0bf/fff&text=alot" />
+              <img src="http://placehold.it/40x60/0bf/fff&text=alot"  alt='a lot'/>
           </label>
         </div>
+
         {this.checkEmptyNote()}
         <CreateButton className="logButton" type="submit">Update</CreateButton>
         <CreateButton className="logButton" type="button" onClick={this.onDelete}>Delete</CreateButton>

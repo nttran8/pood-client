@@ -57,10 +57,18 @@ export default class Header extends Component {
     );
   }
 
+  checkToken = () => {
+    // Show header in mobile view when logged in
+    if(TokenService.getAuthToken()) {
+      return 'Header';
+    }
+    else return '';
+  }
+
   render() {
     // Return to homepage when h1 is clicked
     return (
-      <nav className='Header' id='Header'>
+      <nav className='Header' id={this.checkToken()}>
         <header className='Header__container'>
           <div className='Header__logo'>
             <h1>
