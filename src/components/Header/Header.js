@@ -12,7 +12,7 @@ import PoodContext from '../../contexts/PoodContext';
 // Style
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Header.css';
-import poodIcon from '../../img/Pood.png';
+import poodIcon from '../../img/Pood.svg';
 
 export default class Header extends Component {
   static contextType = PoodContext;

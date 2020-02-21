@@ -4,7 +4,7 @@ import ApiService from '../../services/api-service';
 
 // Style
 import './RegistrationForm.css';
-import poodIcon from '../../img/Pood.png';
+import poodIcon from '../../img/Pood.svg';
 
 export default class RegistrationForm extends Component {
   static defaultProps = {

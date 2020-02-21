@@ -10,7 +10,7 @@ import { CreateButton, CreateInput } from '../Utils/Utils';
 
 // Style 
 import './LoginForm.css';
-import poodIcon from '../../img/Pood.png';
+import poodIcon from '../../img/Pood.svg';
 
 export default class LoginForm extends Component {
   static contextType = PoodContext;
