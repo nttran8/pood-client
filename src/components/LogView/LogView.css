@@ -85,6 +85,12 @@ input[type=radio]:checked + label {
   filter: alpha(opacity=20);
 }
 
+.styleDetail {
+  margin-left: 10px;
+  color: #777777;
+  font-weight: 500;
+}
+
 .logButton {
   margin-left: auto;
   margin-right: auto;
