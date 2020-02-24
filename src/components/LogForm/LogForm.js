@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import moment from 'moment';
 
 // Service
-import { CreateTextarea, CreateButton, CreateTimestamp } from "../Utils/Utils";
+import { CreateTextarea, CreateButton, CreateTimestamp, StyleDetail } from "../Utils/Utils";
 
 // Data
 import PoodContext from "../../contexts/PoodContext";
@@ -33,8 +33,13 @@ export default class LogForm extends Component {
   };
 
   state = {
-    date_created: new Date()
+    date_created: new Date(),
+    style: ''
   };
+
+  updateStyle = (event) => {
+    this.setState({ style: event.currentTarget.value });
+  }
 
   onSubmit = event => {
     event.preventDefault();
@@ -83,13 +88,16 @@ export default class LogForm extends Component {
         </div>
 
         <div className='dataBox'>
-          <label htmlFor='style' className='logLabel'>Appearance*</label>
+          <label htmlFor='style' className='logLabel'>Appearance*
+            <span className='styleDetail'>{this.context.log ? StyleDetail(this.state.style) : ''}</span>
+          </label>
           <div className="logSelection">
             <label>
                 <input 
                   type="radio" 
                   name="style" 
                   value='1' 
+                  onChange={this.updateStyle}
                 />
                 <img src={type1} alt='type 1: separate hard lumps' />
             </label>
@@ -98,6 +106,7 @@ export default class LogForm extends Component {
                   type="radio" 
                   name="style" 
                   value='2' 
+                  onChange={this.updateStyle}
                 />
                 <img src={type2} alt='type 2: lumpy and sausage like'/>
             </label>
@@ -106,6 +115,7 @@ export default class LogForm extends Component {
                   type="radio" 
                   name="style" 
                   value='3' 
+                  onChange={this.updateStyle}
                 />
                 <img src={type3} alt='type 3: sausage shape with cracks' />
             </label>
@@ -114,6 +124,7 @@ export default class LogForm extends Component {
                   type="radio" 
                   name="style" 
                   value='4' 
+                  onChange={this.updateStyle}
                 />
                 <img src={type4} alt='type 4: smooth soft sausage' />
             </label>
@@ -122,6 +133,7 @@ export default class LogForm extends Component {
                   type="radio" 
                   name="style" 
                   value='5' 
+                  onChange={this.updateStyle}
                 />
                 <img src={type5} alt='type 5: soft blobs with clear edges'/>
             </label>
@@ -130,6 +142,7 @@ export default class LogForm extends Component {
                   type="radio" 
                   name="style" 
                   value='6' 
+                  onChange={this.updateStyle}
                 />
                 <img src={type6} alt='type 6: mushy consistency'/>
             </label>
@@ -138,6 +151,7 @@ export default class LogForm extends Component {
                   type="radio" 
                   name="style" 
                   value='7' 
+                  onChange={this.updateStyle}
                 />
                 <img src={type7} alt='type 7: liquid consistency' />
             </label>

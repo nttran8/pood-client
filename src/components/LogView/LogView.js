@@ -3,7 +3,7 @@ import React, { Component } from "react";
 
 // Service
 import ApiService from "../../services/api-service";
-import { CreateButton, CreateTextarea, CreateTimestamp } from "../Utils/Utils";
+import { CreateButton, CreateTextarea, CreateTimestamp, StyleDetail } from "../Utils/Utils";
 
 // Data
 import PoodContext from "../../contexts/PoodContext";
@@ -65,27 +65,6 @@ export default class LogForm extends Component {
           onChange={this.context.updateNote}
         />);
   };
-
-  styleDetail = (style) => {
-    switch (style) {
-      case '1':
-        return 'CONSTIPATION: separate hard lumps, like nuts';
-      case '2':
-        return 'CONSTIPATION: sausage-shaped, but lumpy';
-      case '3':
-        return 'AVERAGE: sausage-shaped, but with cracks';
-      case '4':
-        return 'PERFECTION: sausage/snake shaped and smooth and soft';
-      case '5':
-        return 'LACK FIBER: soft blobs with clear cut edges';
-      case '6':
-        return 'DIARRHIA: fluffly and mushy pieces';
-      case '7':
-        return 'INFLAMMATION: watery';
-      default:
-        return '';
-    };
-  }
 
   onSubmit = (event) => {
     event.preventDefault();
@@ -152,7 +131,7 @@ export default class LogForm extends Component {
         
         <div className='dataBox'>
           <label htmlFor='style' className='logLabel'>Appearance* 
-            <span className='styleDetail'>{this.context.log ? this.styleDetail(this.context.log.style) : ''}</span>
+            <span className='styleDetail'>{this.context.log ? StyleDetail(this.context.log.style) : ''}</span>
           </label>
           <div className="logSelection">
             <label>
