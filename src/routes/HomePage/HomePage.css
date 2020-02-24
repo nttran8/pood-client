@@ -1,100 +1,101 @@
 .HomePage {
-	padding: 25px 25px 20px 25px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
+  padding: 25px 25px 20px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .sec {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .Page__left {
-	display: none;
+  display: none;
 }
 
 #Page__right {
-	height: 100%;
+  height: 100%;
 }
 
+/* Mobile view and images */
 .Page__todo {
-	margin: 40px auto 0 auto;
-	padding: 3px 5px 3px 5px;
+  margin: 40px auto 0 auto;
+  padding: 3px 5px 3px 5px;
 }
 
 .Page__todo > img {
-	width: 300px;
-	background: white;
-	border-radius: 50%;
+  width: 300px;
+  background: white;
+  border-radius: 50%;
 }
 
 .Page__todo > p {
-	font-size: 20px;
-	margin-bottom: 20px;
-	text-align: left;
-	color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+  color: white;
 }
 
 @media only screen and (min-width: 576px) {
-	.HomePage {
-		padding: 60px 10px 20px 10px;
-		flex-direction: row;
-		justify-content: space-around;
-	}
+  .HomePage {
+    padding: 60px 10px 20px 10px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
-	.Page__left {
-		display: block;
-	}
+  .Page__left {
+    display: block;
+  }
 
-	.Page__left > p {
-		font-size: 23px;
-		width: 40vw;
-		text-align: left;
-	}
+  .Page__left > p {
+    font-size: 23px;
+    width: 40vw;
+    text-align: left;
+  }
 
-	.vision {
-		margin-top: 50px;
-		width: 40vw;
-	}
+  .vision {
+    margin-top: 50px;
+    width: 40vw;
+  }
 
-	#Page__right {
-		display: none;
-	}
-	
-	.Page__right {
-		width: 40vw;
-		height: 100vh;
-		gap: 7rem;
-	}
+  #Page__right {
+    display: none;
+  }
+
+  .Page__right {
+    width: 40vw;
+    height: 100vh;
+    gap: 7rem;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-	.HomePage {
-		padding: 50px 20px 20px 20px;
-		justify-content: space-evenly;
-	}
+  .HomePage {
+    padding: 50px 20px 20px 20px;
+    justify-content: space-evenly;
+  }
 
-	.Page__left {
-		margin-left: 40px;
-	}
+  .Page__left {
+    margin-left: 40px;
+  }
 
-	.Page__left > p {
-		font-size: 25px;
-		font-weight: 600;
-		width: 40vw;
-	}
+  .Page__left > p {
+    font-size: 25px;
+    font-weight: 600;
+    width: 40vw;
+  }
 
-	.vision {
-		position: relative;
-		left: 13%;
-		bottom: 18%;
-		width: 35vw;
-	}
+  .vision {
+    position: relative;
+    left: 13%;
+    bottom: 18%;
+    width: 35vw;
+  }
 
-	.Page__right {
-		padding: 0 2rem;
-		gap: 7rem;
-	}
+  .Page__right {
+    padding: 0 2rem;
+    gap: 7rem;
+  }
 }

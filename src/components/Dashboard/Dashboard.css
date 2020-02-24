@@ -3,89 +3,91 @@
 .DashboardPage,
 .DashboardPage__left,
 .DashboardPage__right {
-	height: 100%;
+  height: 100%;
 }
 
 .DashboardPage__left,
 .DashboardPage__right {
-	width: 80vw;
-	margin: 0 auto 0 auto;
+  width: 80vw;
+  margin: 0 auto 0 auto;
 }
 
 #Header {
-	display: block;
+  display: block;
 }
 
 .logButton {
-	width: 200px;
+  width: 200px;
 }
 
 .Dashboard {
-	margin: 10px 15px 0 15px;
+  margin: 10px 15px 0 15px;
 }
 
+/* Log list */
 ul {
-	position: relative;
-	margin: 10px auto;
-	padding: 0px;
+  position: relative;
+  margin: 10px auto;
+  padding: 0px;
 }
 
 ul li {
-	background: rgba(255, 255, 255, .1);
-	color: var(--color-comp-w);
-	transition: .6s;
-	padding: 10px 20px;
-	margin: 6px 0;
-	text-align: left;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-comp-w);
+  transition: 0.6s;
+  padding: 10px 20px;
+  margin: 6px 0;
+  text-align: left;
 }
 
 ul li:hover {
-	background: var(--color-comp-y);
-	transform: scale(1.02);
-	color: var(--color-triad-b);
-	cursor: pointer;
+  background: var(--color-comp-y);
+  transform: scale(1.02);
+  color: var(--color-triad-b);
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 576px) {
-	.Dashboard {
-		margin: 10px 0 0 0;
-	}
+  .Dashboard {
+    margin: 10px 0 0 0;
+  }
 
-	.DashboardPage__left,
-	.DashboardPage__right {
-		width: 70vw;
-	}
+  .DashboardPage__left,
+  .DashboardPage__right {
+    width: 70vw;
+  }
 
-	ul li {
-		background: rgba(7, 59, 76, .8);
-		color: var(--color-comp-w);
-		transition: .6s;
-		padding: 10px 20px;
-		margin: 6px 0;
-		text-align: left;
-	}
+  /* Log list */
+  ul li {
+    background: rgba(7, 59, 76, 0.8);
+    color: var(--color-comp-w);
+    transition: 0.6s;
+    padding: 10px 20px;
+    margin: 6px 0;
+    text-align: left;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-	.Dashboard {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		margin: 5% 0 0 0;
-	}
+  .Dashboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5% 0 0 0;
+  }
 
-	.DashboardPage__left {
-		width: 40vw;
-		margin: 0;
-	}
+  .DashboardPage__right {
+    width: 35vw;
+    margin: 0;
+  }
 
-	.DashboardPage__right {
-		width: 35vw;
-		margin: 0;
-	}
+  /* Log list */
+  .DashboardPage__left {
+    width: 40vw;
+    margin: 0;
+  }
 
-	ul {
-		width: 32vw;
-	}
-
+  ul {
+    width: 32vw;
+  }
 }

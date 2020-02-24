@@ -1,19 +1,17 @@
-// Libraries
-import React, { Component } from 'react';
+// Library
+import React from "react";
 
 // Component
-import Account from '../../components/Account/Account';
+import Account from "../../components/Account/Account";
 
 // Style
-import './AccountPage.css';
+import "./AccountPage.css";
 
-export default class AccountPage extends Component {
-  render() {
-    return (
-      <section className='AccountPage'>
-        <h2>Account Setting</h2>
-        <Account />
-      </section>
-    );
-  }
+export default function AccountPage() {
+  return (
+    <section className="AccountPage">
+      <h2>Account Setting</h2>
+      <Account />
+    </section>
+  );
 }

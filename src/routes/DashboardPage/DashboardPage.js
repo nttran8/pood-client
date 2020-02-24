@@ -1,12 +1,11 @@
-// Libraries
+// Library
 import React, { Component } from "react";
 
-// Components
+// Component
 import Dashboard from "../../components/Dashboard/Dashboard";
 
 // Data
 import PoodContext from "../../contexts/PoodContext";
-
 
 export default class DashboardPage extends Component {
   // Set context for class

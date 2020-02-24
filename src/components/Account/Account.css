@@ -5,9 +5,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(255, 255, 255, .7);
+  background-color: rgba(255, 255, 255, 0.7);
   text-align: left;
-  border-radius: .1cm;
+  border-radius: 0.1cm;
   margin: 15px auto 10px auto;
   width: 85vw;
 }
@@ -24,7 +24,12 @@
   background-color: transparent;
 }
 
-.accountLabel, .acc-username, .fullname, .genderSelection, .email {
+/* Padding for each row in form */
+.accountLabel,
+.acc-username,
+.fullname,
+.genderSelection,
+.email {
   padding-top: 8px;
   padding-bottom: 8px;
 }

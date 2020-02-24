@@ -1,6 +1,12 @@
 let _timeoutId;
 let _idleCallback = null;
-let _notIdleEvents = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart' ];
+let _notIdleEvents = [
+  "mousedown",
+  "mousemove",
+  "keypress",
+  "scroll",
+  "touchstart"
+];
 let _TEN_MINUTES_IN_MS = 10 * 60 * 1000;
 
 const IdleService = {
@@ -27,7 +33,7 @@ const IdleService = {
     _notIdleEvents.forEach(event =>
       document.removeEventListener(event, IdleService.resetIdleTimer, true)
     );
-  },
+  }
 };
 
 export default IdleService;

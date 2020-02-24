@@ -1,55 +1,74 @@
-.Header {
-	display: none;
+#demo {
+  margin: 10px auto 10px auto;
+  font-size: 14px;
+  text-align: left;
 }
 
-.LoginForm__logoBox {
-	margin: 10px 0 50px 0;
+.Header {
+  display: none;
 }
+
+/* Logo in mobile view */
+.LoginForm__logoBox {
+  margin: 10px 0 50px 0;
+}
+
 .LoginForm__logo {
-	width: 50%;
+  width: 50%;
 }
 
 .LoginForm {
-	width: 260px;
-	height: 270px;
+  width: 260px;
+  height: 270px;
 }
 
 .formBox {
-	width: 260px;
+  width: 260px;
 }
 
 @media only screen and (min-width: 576px) {
-	.App {
-		background-image: var(--print);
-		background-color: var(--color-comp-w);
-	}
+  #demo {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 14px;
+  }
 
-	.Header {
-		display: block;
-	}
+  .App {
+    background-image: var(--print);
+    background-color: var(--color-comp-w);
+  }
 
-	.LoginForm__logoBox {
-		display: none;
-	}
+  .Header {
+    display: block;
+  }
 
-	.LoginForm {
-		margin-top: 50px;
-		width: 220px;
-		height: 270px;
-	}
+  .LoginForm__logoBox {
+    display: none;
+  }
 
-	.formBox {
-		width: 200px;
-		margin-left: auto;
-		margin-right: auto;
-	}
+  .LoginForm {
+    margin-top: 50px;
+    width: 220px;
+    height: 270px;
+  }
+
+  .formBox {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-	.LoginForm {
-		width: 350px;
-	}
-	.formBox {
-		width: 290px;
-	}
+  #demo {
+    font-size: 18px;
+  }
+
+  .LoginForm {
+    width: 350px;
+  }
+
+  .formBox {
+    width: 290px;
+  }
 }

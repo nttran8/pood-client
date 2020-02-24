@@ -1,5 +1,8 @@
-import config from '../config';
-import jwtDecode from 'jwt-decode';
+// Get token
+import config from "../config";
+
+// Library
+import jwtDecode from "jwt-decode";
 
 let _timeoutId;
 const _TEN_SECONDS_IN_MS = 10000;
@@ -28,7 +31,7 @@ const TokenService = {
   },
   _getMsUntilExpiry(payload) {
     // Calculate when the JWT will expire
-    return (payload.exp * 1000) - Date.now();
+    return payload.exp * 1000 - Date.now();
   },
   queueCallbackBeforeExpiry(callback) {
     // Get the time when token expires
@@ -40,7 +43,7 @@ const TokenService = {
   },
   clearCallbackBeforeExpiry() {
     clearTimeout(_timeoutId);
-  },
+  }
 };
 
 export default TokenService;

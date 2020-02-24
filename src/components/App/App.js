@@ -1,37 +1,41 @@
 // Libraries
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faUser, faEnvelope, faLock, faPoop } from '@fortawesome/free-solid-svg-icons';
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faUser,
+  faEnvelope,
+  faLock,
+  faPoop
+} from "@fortawesome/free-solid-svg-icons";
 
 // Routes
 import HomePage from "../../routes/HomePage/HomePage";
 import AccountPage from "../../routes/AccountPage/AccountPage";
 import DashboardPage from "../../routes/DashboardPage/DashboardPage";
-import NewLogPage from '../../routes/NewLogPage/NewLogPage';
+import NewLogPage from "../../routes/NewLogPage/NewLogPage";
 import RegistrationPage from "../../routes/RegistrationPage/RegistrationPage";
 import NotFoundPage from "../../routes/NotFoundPage/NotFoundPage";
 
 // Services
-import TokenService from '../../services/token-service';
-import ApiService from '../../services/api-service';
-import IdleService from '../../services/idle-service';
+import TokenService from "../../services/token-service";
+import ApiService from "../../services/api-service";
+import IdleService from "../../services/idle-service";
 
 // Component
-import Header from '../Header/Header';
-import PrivateRoute from '../Utils/PrivateRoute';
-import PublicRoute from '../Utils/PublicRoute';
+import Header from "../Header/Header";
+import PrivateRoute from "../Utils/PrivateRoute";
+import PublicRoute from "../Utils/PublicRoute";
 
 // Data
-import PoodContext from '../../contexts/PoodContext';
+import PoodContext from "../../contexts/PoodContext";
 
 // Style
 import "./App.css";
 library.add(faUser, faEnvelope, faLock, faPoop);
 
-
 export default class App extends Component {
-  state = { 
+  state = {
     error: false
   };
 
@@ -75,11 +79,11 @@ export default class App extends Component {
     IdleService.unRegisterIdleResets();
     // Rerender to let React know that token is removed
     this.forceUpdate();
-  }
+  };
 
   render() {
     return (
-      <main style={{backgroundImage: this.context.background, backgroundColor: this.context.color}} className="App">
+      <main className="App">
         <Header />
         {this.state.error && <p className="red">Poop. There was an error!</p>}
         <Switch>

@@ -4,9 +4,9 @@
   font-weight: 600;
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, .7);
+  background-color: rgba(255, 255, 255, 0.7);
   text-align: left;
-  border-radius: .1cm;
+  border-radius: 0.1cm;
   margin: 15px auto 10px auto;
   width: 85vw;
 }
@@ -18,10 +18,11 @@
   margin-bottom: 25px;
 }
 
+/* Each field section */
 .dataBox {
   margin: 15px 0 5px 0;
   border: 1px solid var(--color-gray);
-  border-radius: .05cm;
+  border-radius: 0.05cm;
 }
 
 .logLabel {
@@ -32,7 +33,11 @@
   background-color: var(--color-comp-w);
 }
 
-.logLabel, .nickname, .logSelection, .note {
+/* Padding for each row */
+.logLabel,
+.nickname,
+.logSelection,
+.note {
   padding-top: 8px;
   padding-bottom: 8px;
 }
@@ -58,25 +63,26 @@
   margin-bottom: 5px;
 }
 
-input[type=radio] {
-  display:none; 
+input[type="radio"] {
+  display: none;
 }
 
-[type=radio] + img, [type=radio] + label {
+[type="radio"] + img,
+[type="radio"] + label {
   cursor: pointer;
 }
 
-[type=radio] + label {
+[type="radio"] + label {
   font-size: 14px;
 }
 
-input[type=radio]:checked + img {
+input[type="radio"]:checked + img {
   outline: 2px solid #000000;
   opacity: 0.5;
   filter: alpha(opacity=20);
 }
 
-input[type=radio]:checked + label {
+input[type="radio"]:checked + label {
   display: block;
   padding-left: 5px;
   padding-right: 5px;
@@ -94,10 +100,10 @@ input[type=radio]:checked + label {
 @media only screen and (min-width: 576px) {
   .logLabel {
     padding-left: 20px;
-    background-color:  transparent;
+    background-color: transparent;
   }
 
-  input[type=radio]:checked + label {
+  input[type="radio"]:checked + label {
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -114,7 +120,7 @@ input[type=radio]:checked + label {
     padding: 20px 10px 10px 10px;
     width: 40vw;
   }
-  
+
   .style img {
     width: 70px;
   }
@@ -123,19 +129,17 @@ input[type=radio]:checked + label {
     height: 40px;
   }
 
-  input[type=radio]:checked + img {
+  input[type="radio"]:checked + img {
     outline: 3px solid #000000;
   }
 
-  input[type=radio]:checked + label {
+  input[type="radio"]:checked + label {
     padding: 5px 13px 5px 13px;
     border-radius: 15px;
   }
 
-  input[type=radio] + label {
+  input[type="radio"] + label {
     margin-top: auto;
     margin-bottom: auto;
   }
 }
-
-

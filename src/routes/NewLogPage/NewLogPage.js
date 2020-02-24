@@ -1,8 +1,8 @@
-// Libraries
-import React, { Component } from 'react';
+// Library
+import React, { Component } from "react";
 
 // Component
-import LogForm from '../../components/LogForm/LogForm';
+import LogForm from "../../components/LogForm/LogForm";
 
 // Style
 import "./NewLogPage.css";
@@ -20,19 +20,17 @@ export default class NewLogPage extends Component {
   };
 
   handleAddRedirect = () => {
-    // Render dashboard if add is successful
+    // Redirect user to dashboard if log is successfully added
     const { location, history } = this.props;
-    const destination = (location.state || {}).from || '/dashboard';
+    const destination = (location.state || {}).from || "/dashboard";
     history.push(destination);
   };
 
   render() {
     return (
-      <section className='NewLogPage'>
-        <h2>
-          Log the Log
-        </h2>
-          <LogForm onSuccess={this.handleAddRedirect}/>
+      <section className="NewLogPage">
+        <h2>Log the Log</h2>
+        <LogForm onSuccess={this.handleAddRedirect} />
       </section>
     );
   }

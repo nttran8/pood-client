@@ -26,7 +26,7 @@ const PoodContext = React.createContext({
   setUser: () => {},
   updateUser: () => {},
   clearUser: () => {},
-  fetchLogList: () => {},
+  fetchLogList: () => {}
 });
 
 export default PoodContext;
@@ -40,7 +40,7 @@ export class PoodProvider extends Component {
   };
 
   changeBG = (image, color) => {
-    this.setState({ image, color })
+    this.setState({ image, color });
   };
 
   setUser = user => {
@@ -49,11 +49,9 @@ export class PoodProvider extends Component {
 
   updateUser = user => {
     console.log(user);
-    ApiService
-      .patchUser(user)
-       .then (() => {
-        this.setState({ user });
-      });
+    ApiService.patchUser(user).then(() => {
+      this.setState({ user });
+    });
   };
 
   clearUser = () => {
@@ -61,11 +59,12 @@ export class PoodProvider extends Component {
   };
 
   addLog = log => {
-    ApiService
-      .postLog(log)
-      .then(newLog => 
-        this.setState({ logList: [...this.state.logList, newLog] })
-      );
+    ApiService.postLog(log).then(newLog =>
+      this.setState({
+        logList: [...this.state.logList, newLog],
+        log: newLog
+      })
+    );
   };
 
   setLog = log => {
@@ -73,43 +72,48 @@ export class PoodProvider extends Component {
   };
 
   updateNickname = event => {
-    this.setState({ 
-      log: { 
-        ...this.state.log, 
-        nickname: event.currentTarget.value 
-      }});
+    this.setState({
+      log: {
+        ...this.state.log,
+        nickname: event.currentTarget.value
+      }
+    });
   };
 
   updateStyle = event => {
-    this.setState({ 
-      log: { 
-        ...this.state.log, 
-        style: event.currentTarget.value 
-      }});
+    this.setState({
+      log: {
+        ...this.state.log,
+        style: event.currentTarget.value
+      }
+    });
   };
 
   updateColor = event => {
-    this.setState({ 
-      log: { 
-        ...this.state.log, 
+    this.setState({
+      log: {
+        ...this.state.log,
         color: event.currentTarget.value
-      }});
+      }
+    });
   };
 
   updateAmount = event => {
-    this.setState({ 
-      log: { 
-        ...this.state.log, 
+    this.setState({
+      log: {
+        ...this.state.log,
         amount: event.currentTarget.value
-      }});
+      }
+    });
   };
 
   updateNote = event => {
-    this.setState({ 
-      log: { 
-        ...this.state.log, 
+    this.setState({
+      log: {
+        ...this.state.log,
         note: event.currentTarget.value
-      }});
+      }
+    });
   };
 
   clearLog = () => {
@@ -128,11 +132,11 @@ export class PoodProvider extends Component {
 
   removeLog = () => {
     ApiService.deleteLog(this.state.log.id);
-    this.setState({ 
+    this.setState({
       logList: this.state.logList.filter(log => log.id !== this.state.log.id),
       log: this.state.logList[0]
-    })
-  }
+    });
+  };
 
   setError = error => {
     console.error(error);
@@ -146,7 +150,9 @@ export class PoodProvider extends Component {
   fetchLogList = () => {
     ApiService.getUserLogs()
       .then(res => {
-        res.logs.sort((a, b) => new Date(b.date_created) - new Date(a.date_created));
+        res.logs.sort(
+          (a, b) => new Date(b.date_created) - new Date(a.date_created)
+        );
         this.setState({ user: res.user });
         this.setState({ logList: res.logs });
         this.setState({ log: res.logs[0] });
