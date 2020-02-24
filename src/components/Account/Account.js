@@ -133,7 +133,7 @@ export default class Account extends Component{
               /> */}
 
           <CreateButton className='accountButton' type='submit'>
-            Change
+            Update
           </CreateButton>
 
         </form>  

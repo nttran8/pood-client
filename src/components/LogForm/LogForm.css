@@ -29,6 +29,7 @@
   width: 100%;
   display: block;
   padding-left: 7px;
+  background-color: var(--color-comp-w);
 }
 
 .logLabel, .nickname, .logSelection, .note {
@@ -66,7 +67,7 @@ input[type=radio] {
 }
 
 [type=radio] + label {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 input[type=radio]:checked + img {
@@ -93,6 +94,7 @@ input[type=radio]:checked + label {
 @media only screen and (min-width: 576px) {
   .logLabel {
     padding-left: 20px;
+    background-color:  transparent;
   }
 
   input[type=radio]:checked + label {
@@ -110,14 +112,9 @@ input[type=radio]:checked + label {
   .LogForm {
     border: 1px solid black;
     padding: 20px 10px 10px 10px;
-    font-size: 18px;
     width: 40vw;
   }
-
-  .timestamp {
-    font-size: 20px;
-  }
-
+  
   .style img {
     width: 70px;
   }

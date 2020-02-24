@@ -17,7 +17,6 @@ export default class DashboardPage extends Component {
   }
 
   render() {
-    console.log(this.context.user);
     const { error } = this.context;
     return (
       <section className="DashboardPage">

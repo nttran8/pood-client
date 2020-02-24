@@ -1,6 +1,8 @@
 // Libraries
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faUser, faEnvelope, faLock, faPoop } from '@fortawesome/free-solid-svg-icons';
 
 // Routes
 import HomePage from "../../routes/HomePage/HomePage";
@@ -17,12 +19,16 @@ import IdleService from '../../services/idle-service';
 
 // Component
 import Header from '../Header/Header';
+import PrivateRoute from '../Utils/PrivateRoute';
+import PublicRoute from '../Utils/PublicRoute';
 
 // Data
 import PoodContext from '../../contexts/PoodContext';
 
 // Style
 import "./App.css";
+library.add(faUser, faEnvelope, faLock, faPoop);
+
 
 export default class App extends Component {
   state = { 
@@ -78,10 +84,10 @@ export default class App extends Component {
         {this.state.error && <p className="red">Poop. There was an error!</p>}
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/register" component={RegistrationPage} />
-          <Route path="/account" component={AccountPage} />
-          <Route path="/dashboard" component={DashboardPage} />
-          <Route path="/log" component={NewLogPage} />
+          <PublicRoute path="/register" component={RegistrationPage} />
+          <PrivateRoute path="/account" component={AccountPage} />
+          <PrivateRoute path="/dashboard" component={DashboardPage} />
+          <PrivateRoute path="/log" component={NewLogPage} />
           <Route component={NotFoundPage} />
         </Switch>
       </main>

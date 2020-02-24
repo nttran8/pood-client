@@ -2,7 +2,6 @@
   width: 80vw;
   padding: 15px 10px 10px 10px;
   font-size: 14px;
-  font-weight: 600;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,6 +17,7 @@
   width: 100%;
   display: block;
   padding-left: 7px;
+  font-weight: 600;
 }
 
 .accountError {
@@ -45,6 +45,7 @@
 
 .accountButton {
   width: 200px;
+  margin: 5px auto auto auto;
 }
 
 @media only screen and (min-width: 567px) {
@@ -53,8 +54,11 @@
   }
 
   .inputForm > input {
-    font-size: 16px;
     padding-left: 20px;
+  }
+
+  .accountButton {
+    margin: 40px auto auto auto;
   }
 }
 
@@ -62,7 +66,6 @@
   .AccountForm {
     border: 1px solid black;
     padding: 20px 10px 10px 10px;
-    font-size: 18px;
     width: 40vw;
   }
 }

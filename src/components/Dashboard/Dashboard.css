@@ -74,9 +74,13 @@ ul li:hover {
 		margin: 5% 0 0 0;
 	}
 
-	.DashboardPage__left,
-	.DashboardPage__right {
+	.DashboardPage__left {
 		width: 40vw;
+		margin: 0;
+	}
+
+	.DashboardPage__right {
+		width: 35vw;
 		margin: 0;
 	}
 

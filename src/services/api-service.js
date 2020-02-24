@@ -113,10 +113,10 @@ const ApiService = {
       },
       body: JSON.stringify(user)
     })
-      .then(res => console.log(res)
-        // (!res.ok)
-        //   ? Promise.reject()
-        //   : null
+      .then(res =>
+        (!res.ok)
+          ? Promise.reject()
+          : null
       )
   },
   // Add log

@@ -1,6 +1,7 @@
 // Libraries
 import React, { Component } from "react";
 import { CreateDate } from "../Utils/Utils";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Data
 import PoodContext from "../../contexts/PoodContext";
@@ -18,7 +19,7 @@ export default class LogList extends Component {
         <li id={log.id}>
         <header className="LogList__header">
           <span className="LogList__nickname">{log.nickname}</span>
-          <i className="fas fa-poop"></i>
+          <FontAwesomeIcon icon="poop"/>
         </header>
         <footer className="LogList__footer">
           <LogDate log={log} />
@@ -30,7 +31,7 @@ export default class LogList extends Component {
       <li id={log.id}>
         <header className="LogList__header">
           <span className="LogList__nickname">{log.nickname}</span>
-          <i className="fas fa-poop"></i>
+          <FontAwesomeIcon icon="poop"/>
         </header>
         <footer className="LogList__footer">
           <LogDate log={log} />

@@ -1,6 +1,11 @@
+// Library
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+// Service
 import { CreateButton, CreateInput } from '../Utils/Utils';
 import ApiService from '../../services/api-service';
+
 
 // Style
 import './RegistrationForm.css';
@@ -56,7 +61,7 @@ export default class RegistrationForm extends Component {
             <div className='RegistrationForm__credential'>
 
               <div className='inputBox'>
-                <i className="fas fa-lock"></i>
+                <FontAwesomeIcon icon="user"/>
                 <CreateInput 
                   className='username' 
                   id='username' 
@@ -66,7 +71,7 @@ export default class RegistrationForm extends Component {
               </div>
 
               <div className='inputBox'>
-                <i className="fas fa-envelope"></i>
+                <FontAwesomeIcon icon="envelope"/>
                 <CreateInput 
                   className='email' 
                   id='email' 
@@ -77,7 +82,7 @@ export default class RegistrationForm extends Component {
               </div>
 
               <div className='inputBox'>
-                <i className="fas fa-lock"></i>
+              <FontAwesomeIcon icon="lock"/>
                 <CreateInput 
                   type='password'
                   className='password' 

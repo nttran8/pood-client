@@ -28,6 +28,7 @@
   width: 100%;
   display: block;
   padding-left: 7px;
+  background-color: var(--color-comp-w);
 }
 
 .logLabel, .nickname, .logSelection, .note {
@@ -65,7 +66,7 @@ input[type=radio] {
 }
 
 [type=radio] + label {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 input[type=radio]:checked + img {
@@ -96,6 +97,7 @@ input[type=radio]:checked + label {
 
   .logLabel {
     padding-left: 20px;
+    background-color:  transparent;
   }
 
   input[type=radio]:checked + label {
@@ -104,7 +106,6 @@ input[type=radio]:checked + label {
   }
 
   .inputForm > textarea {
-    font-size: 16px;
     padding-left: 20px;
   }
 }
@@ -112,12 +113,7 @@ input[type=radio]:checked + label {
 @media only screen and (min-width: 768px) {
   .LogView {
     border: 1px solid black;
-    padding: 20px 10px 10px 10px;
-    font-size: 18px;
-  }
-
-  .timestamp {
-    font-size: 20px;
+    padding: 20px 30px 10px 30px;
   }
 
   .style img {

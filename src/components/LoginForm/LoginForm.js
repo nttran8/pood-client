@@ -1,5 +1,6 @@
 // Library
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Data
 import PoodContext from '../../contexts/PoodContext';
@@ -59,7 +60,7 @@ export default class LoginForm extends Component {
             </div>
 
             <div className='inputBox'>
-              <i className="fas fa-user"></i>
+            <FontAwesomeIcon icon="user"/>
               <CreateInput 
                 className='username' 
                 id='username' 
@@ -68,7 +69,7 @@ export default class LoginForm extends Component {
             </div>
           
             <div className='inputBox'>
-              <i className="fas fa-lock"></i>
+            <FontAwesomeIcon icon="lock"/>
               <CreateInput 
                 className='password' 
                 id='password' 
