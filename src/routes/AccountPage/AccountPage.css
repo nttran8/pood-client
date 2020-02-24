@@ -1,0 +1,22 @@
+.AccountPage {
+  padding-top: 15px;
+}
+
+.AccountPage > h2 {
+  color: var(--color-comp-w);
+}
+
+@media only screen and (min-width: 567px) {
+  .AccountPage > h2 {
+    color: var(--color-triad-b);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .AccountPage {
+    padding-top: 30px;
+  }
+
+  .AccountPage > h2 {
+    font-size: 30px;
+  }
+}

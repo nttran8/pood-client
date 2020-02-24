@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { CreateButton, CreateInput } from '../Utils/Utils';
 import PoodContext from '../../contexts/PoodContext';
 
+// Style
+import './Account.css';
+
 export default class Account extends Component{
   static contextType = PoodContext;
   static defaultProps = {
@@ -14,6 +17,12 @@ export default class Account extends Component{
   
   handleSubmit = event => {
     event.preventDefault();
+
+    console.log(this.context.user);
+    // Validate data
+    if (event.currentTarget.email.value === '') {
+      return alert('Email is required');
+    }
     // Get input
     const user = {
       id: this.context.user.id,
@@ -50,76 +59,83 @@ export default class Account extends Component{
           onSubmit={this.handleSubmit}
         >
           <div role='alert'>
-            {error && <p className='red'>{error}</p>}
+            {error && <p className='red accountError'>{error}</p>}
           </div>
-          <div className='AccountForm__credential'>
-            <fieldset className='AccountForm__general-info'>
-              <legend>General Information</legend>
-              <label htmlFor='username'>username</label>
+
+            <div className='inputForm dataBox'>
+              <label className='accountLabel' htmlFor='username'>Username</label>
               <CreateInput 
-                className='username' 
+                className='acc-username' 
                 id='username'
                 defaultValue={username}
                 readOnly
                 onClick={() => this.setState({ error: 'Cannot change username'})}
               />
-              <label htmlFor='fullname'>fullname</label>
+            </div>
+
+            <div className='inputForm dataBox'>
+              <label className='accountLabel' htmlFor='fullname'>Fullname</label>
               <CreateInput 
                 className='fullname' 
                 id='fullname' 
-                defaultValue={fullname}
+                defaultValue={fullname ? fullname : ''}
               />
-              <fieldset className='AccountForm__gender'>
-                <legend>Gender:</legend>
-                <CreateInput 
-                  type="radio" 
-                  id="female" 
-                  name="gender"
-                  value="female"
-                  checked={gender === "female"}
-                  onChange={this.updateGender}
-                />
-                <label htmlFor="female">female</label><br/>
-                <CreateInput 
-                  type="radio" 
-                  id="male" 
-                  name="gender"
-                  value="male"
-                  checked={gender === "male"}
-                  onChange={this.updateGender}
-                />
-                <label htmlFor="male">male</label><br/>
-              </fieldset>
-            </fieldset>
-            <fieldset className='AccountForm__contact-info'>
-              <legend>Contact Information</legend>
-              <label htmlFor='email'>email</label>
+            </div>
+
+            <div className='dataBox'>
+                <label className='accountLabel'>Gender</label>
+                <div className='genderSelection'>
+                  <CreateInput 
+                    type="radio" 
+                    id="female" 
+                    name="gender"
+                    value="female"
+                    checked={gender === "female"}
+                    onChange={this.updateGender}
+                  />
+                  <label htmlFor="female">female</label>
+                  <CreateInput 
+                    type="radio" 
+                    id="male" 
+                    name="gender"
+                    value="male"
+                    checked={gender === "male"}
+                    onChange={this.updateGender}
+                  />
+                  <label htmlFor="male">male</label>
+                </div>
+            </div>
+
+            <div className='inputForm dataBox'>
+              <label className='accountLabel' htmlFor='email'>Email*</label>
               <CreateInput 
                 className='email'
                 id='email'
                 defaultValue={email}
                 required
               />
-              <label htmlFor='oldPassword'>old password</label>
+            </div>
+
+              {/* <label htmlFor='oldPassword'>Old Password</label>
               <CreateInput 
                 className='oldPassword'
                 id='oldPassword'
               />
-              <label htmlFor='password'>password</label>
+              <label htmlFor='password'>Password</label>
               <CreateInput
                 className='password'
                 id='password'
               />
-              <label htmlFor='confirmedPassword'>confirmed password</label>
+              <label htmlFor='confirmedPassword'>Confirmed Password</label>
               <CreateInput
                 className='confirmedPassword'
                 id='confirmedPassword'
-              />
-            </fieldset>
-          </div>
-          <CreateButton type='submit'>
+              /> */}
+
+          <CreateButton className='accountButton' type='submit'>
             Change
           </CreateButton>
+
         </form>  
       </>
     );

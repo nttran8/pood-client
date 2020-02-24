@@ -1,0 +1,68 @@
+.AccountForm {
+  width: 80vw;
+  padding: 15px 10px 10px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, .7);
+  text-align: left;
+  border-radius: .1cm;
+  margin: 15px auto 10px auto;
+  width: 85vw;
+}
+
+.accountLabel {
+  border-bottom: 1px solid var(--color-gray);
+  width: 100%;
+  display: block;
+  padding-left: 7px;
+}
+
+.accountError {
+  background-color: transparent;
+}
+
+.accountLabel, .acc-username, .fullname, .genderSelection, .email {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.inputForm > input {
+  width: 100%;
+  font-size: 14px;
+  padding-left: 7px;
+  background-color: transparent;
+  border: none;
+}
+
+.genderSelection {
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: 500;
+}
+
+.accountButton {
+  width: 200px;
+}
+
+@media only screen and (min-width: 567px) {
+  .accountLabel {
+    padding-left: 20px;
+  }
+
+  .inputForm > input {
+    font-size: 16px;
+    padding-left: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .AccountForm {
+    border: 1px solid black;
+    padding: 20px 10px 10px 10px;
+    font-size: 18px;
+    width: 40vw;
+  }
+}

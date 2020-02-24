@@ -35,7 +35,6 @@ export default class LoginForm extends Component {
         // Clear form
         username.value = '';
         password.value = '';
-        this.context.changeBG("var(--print)", "var(--color-comp-w)");
         // Redirect to dashboard if login is succesful
         this.props.onLogin();
       })

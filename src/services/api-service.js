@@ -60,7 +60,7 @@ const ApiService = {
       console.error(error);
     });
   },
-  // needs edit of the body
+  // Get User Logs
   getUserLogs() {
     return fetch(`${config.API_ENDPOINT}/api/logs`, {
       headers: {
@@ -104,6 +104,7 @@ const ApiService = {
   },
   // Edit user account
   patchUser(user) {
+    console.log(user);
     return fetch(`${config.API_ENDPOINT}/api/users/${user.id}`, {
       method: 'PATCH',
       headers: {
@@ -112,10 +113,10 @@ const ApiService = {
       },
       body: JSON.stringify(user)
     })
-      .then(res =>
-        (!res.ok)
-          ? Promise.reject()
-          : null
+      .then(res => console.log(res)
+        // (!res.ok)
+        //   ? Promise.reject()
+        //   : null
       )
   },
   // Add log

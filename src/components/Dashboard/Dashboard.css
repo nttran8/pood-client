@@ -6,6 +6,12 @@
 	height: 100%;
 }
 
+.DashboardPage__left,
+.DashboardPage__right {
+	width: 80vw;
+	margin: 0 auto 0 auto;
+}
+
 #Header {
 	display: block;
 }
@@ -20,7 +26,6 @@
 
 ul {
 	position: relative;
-	width: 80vw;
 	margin: 10px auto;
 	padding: 0px;
 }
@@ -46,7 +51,8 @@ ul li:hover {
 		margin: 10px 0 0 0;
 	}
 
-	ul {
+	.DashboardPage__left,
+	.DashboardPage__right {
 		width: 70vw;
 	}
 
@@ -64,12 +70,18 @@ ul li:hover {
 	.Dashboard {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-evenly;
+		justify-content: center;
 		margin: 5% 0 0 0;
 	}
 
+	.DashboardPage__left,
+	.DashboardPage__right {
+		width: 40vw;
+		margin: 0;
+	}
+
 	ul {
-		width: 30vw;
+		width: 32vw;
 	}
 
 }

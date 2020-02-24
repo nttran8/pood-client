@@ -23,8 +23,6 @@ export default class Header extends Component {
     this.context.clearLogList();
     this.context.clearLog();
     this.context.clearUser();
-    // Reset background
-    this.context.changeBG("none", "var(--color-main)");
     // Log user out of session and expire their token
     TokenService.clearAuthToken();
     // Stop refresh and idle timers
@@ -35,10 +33,10 @@ export default class Header extends Component {
   renderLoginLink() {
     return (
       <div className='Header__login navbar'>
-          <Link className='nav' to='/' onClick={() => this.context.changeBG("none", "var(--color-main)")}>
+          <Link className='nav' to='/' >
             <li>Home</li>
           </Link>
-          <Link className='nav' to='/register' onClick={() => this.context.changeBG("none", "var(--color-main)")}>
+          <Link className='nav' to='/register' >
             <li>Register</li>
           </Link>
       </div>
@@ -49,9 +47,9 @@ export default class Header extends Component {
     // render logout
     return(
       <div className='Header__logout navbar'>
-          <Link className='nav' to='/' onClick={() => this.context.changeBG("var(--print)", "var(--color-comp-w)")} ><li>Home</li></Link>
-          <Link className='nav' to='/dashboard' onClick={() => this.context.changeBG("var(--print)", "var(--color-comp-w)")} ><li>Dashboard</li></Link>
-          <Link className='nav' to='/account' onClick={() => this.context.changeBG("var(--print)", "var(--color-comp-w)")} ><li>Account</li></Link>
+          <Link className='nav' to='/' ><li>Home</li></Link>
+          <Link className='nav' to='/dashboard' ><li>Dashboard</li></Link>
+          <Link className='nav' to='/account' ><li>Account</li></Link>
           <Link className='nav' onClick={this.handleLogout} to='/'><li>Logout</li></Link>
       </div>
     );

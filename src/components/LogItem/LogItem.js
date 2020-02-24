@@ -12,8 +12,21 @@ export default class LogList extends Component {
 
 
   render() {
-    const { log } = this.props;
-    return (
+    const { log, expand } = this.props;
+    if (expand) {
+      return (
+        <li id={log.id}>
+        <header className="LogList__header">
+          <span className="LogList__nickname">{log.nickname}</span>
+          <i className="fas fa-poop"></i>
+        </header>
+        <footer className="LogList__footer">
+          <LogDate log={log} />
+        </footer>
+      </li>
+      )
+    }
+    else return (
       <li id={log.id}>
         <header className="LogList__header">
           <span className="LogList__nickname">{log.nickname}</span>

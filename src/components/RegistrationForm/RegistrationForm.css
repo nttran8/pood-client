@@ -3,10 +3,10 @@
 }
 
 .RegistrationForm__logoBox {
-	margin: 30px 0 50px 0;
+	margin: 10px 0 50px 0;
 }
 .RegistrationForm__logo {
-	width: 40%;
+	width: 50%;
 }
 
 @media only screen and (min-width: 576px) {

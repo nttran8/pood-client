@@ -4,6 +4,9 @@ import React, { Component } from 'react';
 // Component
 import LogForm from '../../components/LogForm/LogForm';
 
+// Style
+import "./NewLogPage.css";
+
 export default class NewLogPage extends Component {
   static defaultProps = {
     location: {},

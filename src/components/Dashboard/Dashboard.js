@@ -38,8 +38,10 @@ export default class Dashboard extends Component {
     return logList.map(log =>
       <LogItem 
         key={"LogItem__" + log.id} 
-        log={log} 
-      />);
+        log={log}
+        expand={log.id === this.context.log.id && this.state.expanded === true ? true : false}
+        />
+      );
   }
 
   componentDidMount() {

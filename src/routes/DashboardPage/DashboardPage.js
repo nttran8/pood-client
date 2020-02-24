@@ -14,10 +14,10 @@ export default class DashboardPage extends Component {
 
   componentDidMount() {
     this.context.clearError();
-    // API service here
   }
 
   render() {
+    console.log(this.context.user);
     const { error } = this.context;
     return (
       <section className="DashboardPage">

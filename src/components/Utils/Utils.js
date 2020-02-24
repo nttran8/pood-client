@@ -4,11 +4,11 @@ import moment from "moment";
 
 import './Utils.css';
 
-export function CreateDate(date, format = "dddd, MMMM do, YYYY" ) {
+export function CreateDate(date, format = "dddd, MMMM Do, YYYY" ) {
   return moment(date).format(format);
 }
 
-export function CreateTimestamp(date, format = "MMMM do, h:mm a") {
+export function CreateTimestamp(date, format = "MMMM Do, h:mm a") {
   return moment(date).format(format);
 }
 

@@ -10,6 +10,7 @@ import LoginForm from '../../components/LoginForm/LoginForm';
 // Style
 import './HomePage.css';
 import dooerImg from '../../img/Dooers.svg';
+import todoImg from '../../img/Todo.svg';
 
 
 export default class HomePage extends Component {
@@ -33,13 +34,13 @@ export default class HomePage extends Component {
     history.push('/register');
   };
 
-  loggedIn = () => {
-    // Check if user is logged in
-    // if(user.name === 'nt') {
-    //   return true;
-    // }
-    return false;
-  };
+  checkToken = () => {
+    // Show different images in mobile view when logged in
+    if(TokenService.getAuthToken()) {
+      return 'Page__right';
+    }
+    else return '';
+  }
 
   render() {
     return (
@@ -48,9 +49,12 @@ export default class HomePage extends Component {
           <p>Our vision is to inspire and unite a world of doo-ers.</p>
           <img className="vision" src={dooerImg} alt="friends high fiving"/>
         </div>
-        <div className="Page__right sec">
+        <div className="Page__right sec" id={this.checkToken()}>
           {TokenService.hasAuthToken()
-          ? <img alt="poo'd logo"/>
+          ? (<div className="Page__todo">
+            <p>What's on your to doo list...?</p>
+            <img className="todo" src={todoImg} alt="check off to do list"/>
+            </div>)
           : <LoginForm onLogin={this.handleLoginRedirect} onRegister={this.handleRegistrationRedirect}/> 
           }
         </div>

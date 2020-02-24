@@ -1,0 +1,144 @@
+.LogForm {
+  padding: 15px 10px 10px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, .7);
+  text-align: left;
+  border-radius: .1cm;
+  margin: 15px auto 10px auto;
+  width: 85vw;
+}
+
+.timestamp {
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.dataBox {
+  margin: 15px 0 5px 0;
+  border: 1px solid var(--color-gray);
+  border-radius: .05cm;
+}
+
+.logLabel {
+  border-bottom: 1px solid var(--color-gray);
+  width: 100%;
+  display: block;
+  padding-left: 7px;
+}
+
+.logLabel, .nickname, .logSelection, .note {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.inputForm > textarea {
+  width: 100%;
+  font-size: 14px;
+  padding-left: 7px;
+}
+
+.nickname {
+  height: 30px;
+}
+
+.logSelection img {
+  width: 40px;
+}
+
+.logSelection {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+input[type=radio] {
+  display:none; 
+}
+
+[type=radio] + img, [type=radio] + label {
+  cursor: pointer;
+}
+
+[type=radio] + label {
+  font-size: 16px;
+}
+
+input[type=radio]:checked + img {
+  outline: 2px solid #000000;
+  opacity: 0.5;
+  filter: alpha(opacity=20);
+}
+
+input[type=radio]:checked + label {
+  display: block;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  opacity: 0.5;
+  filter: alpha(opacity=20);
+}
+
+.logButton {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 576px) {
+  .logLabel {
+    padding-left: 20px;
+  }
+
+  input[type=radio]:checked + label {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .inputForm > textarea {
+    font-size: 16px;
+    padding-left: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .LogForm {
+    border: 1px solid black;
+    padding: 20px 10px 10px 10px;
+    font-size: 18px;
+    width: 40vw;
+  }
+
+  .timestamp {
+    font-size: 20px;
+  }
+
+  .style img {
+    width: 70px;
+  }
+
+  .nickname {
+    height: 40px;
+  }
+
+  input[type=radio]:checked + img {
+    outline: 3px solid #000000;
+  }
+
+  input[type=radio]:checked + label {
+    padding: 5px 13px 5px 13px;
+    border-radius: 15px;
+  }
+
+  input[type=radio] + label {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+

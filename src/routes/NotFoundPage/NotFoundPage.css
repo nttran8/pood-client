@@ -1,0 +1,34 @@
+.NotFoundPage {
+  padding-top: 120px;
+}
+
+.FourOhFour {
+  font-size: 6rem;
+  color: var(--color-triad-r);
+}
+
+.NotFoundPage > p {
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.FourOhFourButton {
+  width: 150px;
+  margin: auto;
+}
+
+@media only screen and (min-width: 576px) {
+  .FourOhFour {
+    font-size: 10rem;
+  }
+
+  .NotFoundPage > p {
+    font-size: 18px;
+  }
+
+  .FourOhFourButton {
+    width: 180px;
+    margin: auto;
+  }
+
+}

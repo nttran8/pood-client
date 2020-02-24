@@ -1,0 +1,22 @@
+.NewLogPage {
+  padding-top: 15px;
+}
+
+.NewLogPage > h2 {
+  color: var(--color-comp-w);
+}
+
+@media only screen and (min-width: 567px) {
+  .NewLogPage > h2 {
+    color: var(--color-triad-b);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .NewLogPage {
+    padding-top: 30px;
+  }
+
+  .NewLogPage > h2 {
+    font-size: 30px;
+  }
+}

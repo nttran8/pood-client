@@ -42,14 +42,11 @@
 	padding: 0 20px;
 }
 
-.navbar a:last-child {
-	padding-right: 0;
-}
-
 .navbar a li {
 	color: var(--color-comp-w);
 	font-size: 14px;
 	font-weight: 600;
+	text-align: right;
 }
 
 @media only screen and (min-width: 576px) {
@@ -77,9 +74,14 @@
 	.navbar a li {
 		display: table-cell;
 		vertical-align: middle;
+		text-align: center;
 		height: 100%;
 		color: var(--color-comp-w);
 		font-size: 16px;
+	}
+
+	.navbar a:last-child {
+		padding-right: 0;
 	}
 }
 

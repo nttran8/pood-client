@@ -6,8 +6,6 @@ import ApiService from "../services/api-service";
 
 // Create context
 const PoodContext = React.createContext({
-  image: "var(--print)",
-  color: "var(--color-comp-w)",
   logList: [],
   log: {},
   user: {},
@@ -35,8 +33,6 @@ export default PoodContext;
 
 export class PoodProvider extends Component {
   state = {
-    image: "var(--print)",
-    color: "var(--color-comp-w)",
     logList: [],
     log: {},
     user: {},
@@ -52,9 +48,10 @@ export class PoodProvider extends Component {
   };
 
   updateUser = user => {
+    console.log(user);
     ApiService
       .patchUser(user)
-      .then (() => {
+       .then (() => {
         this.setState({ user });
       });
   };
@@ -65,7 +62,10 @@ export class PoodProvider extends Component {
 
   addLog = log => {
     ApiService
-      .postLog(log);
+      .postLog(log)
+      .then(newLog => 
+        this.setState({ logList: [...this.state.logList, newLog] })
+      );
   };
 
   setLog = log => {
@@ -127,10 +127,7 @@ export class PoodProvider extends Component {
   };
 
   removeLog = () => {
-    ApiService.deleteLog(this.state.log.id)
-      .then(() => {
-        alert('Log is successfully removed');
-      });
+    ApiService.deleteLog(this.state.log.id);
     this.setState({ 
       logList: this.state.logList.filter(log => log.id !== this.state.log.id),
       log: this.state.logList[0]
@@ -159,8 +156,6 @@ export class PoodProvider extends Component {
 
   render() {
     const value = {
-      background: this.state.background,
-      changeBG: this.changeBG,
       logList: this.state.logList,
       log: this.state.log,
       user: this.state.user,
