@@ -98,6 +98,10 @@ input[type="radio"]:checked + label {
 }
 
 @media only screen and (min-width: 576px) {
+  .LogForm {
+    background-color: var(--color-comp-w);
+  }
+
   .logLabel {
     padding-left: 20px;
     background-color: transparent;

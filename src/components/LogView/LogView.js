@@ -93,6 +93,7 @@ export default class LogForm extends Component {
       return alert("Amount is required");
     }
 
+    // Update log in database and context
     const updateLog = {
       id: log.id,
       nickname: event.currentTarget.nickname.value,
@@ -106,11 +107,14 @@ export default class LogForm extends Component {
       setLog(updateLog);
       const i = logList.findIndex(l => l.id === updateLog.id);
       updateLogList(i, updateLog);
+      alert("Log is updated!");
     });
   };
 
   onDelete = () => {
+    // Prompt user before deleting
     let remove = window.confirm("Are you sure you want to dump the dump?");
+    // Delete log from database and context when confirmed
     if (remove === true) {
       this.context.removeLog();
     }

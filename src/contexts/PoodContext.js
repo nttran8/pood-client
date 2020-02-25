@@ -3,6 +3,8 @@ import React, { Component } from "react";
 
 // Service
 import ApiService from "../services/api-service";
+import TokenService from "../services/token-service";
+import IdleService from "../services/idle-service";
 
 // Create context
 const PoodContext = React.createContext({
@@ -26,7 +28,8 @@ const PoodContext = React.createContext({
   setUser: () => {},
   updateUser: () => {},
   clearUser: () => {},
-  fetchLogList: () => {}
+  fetchLogList: () => {},
+  handleLogout: () => {}
 });
 
 export default PoodContext;
@@ -39,16 +42,11 @@ export class PoodProvider extends Component {
     error: null
   };
 
-  changeBG = (image, color) => {
-    this.setState({ image, color });
-  };
-
   setUser = user => {
     this.setState({ user });
   };
 
   updateUser = user => {
-    console.log(user);
     ApiService.patchUser(user).then(() => {
       this.setState({ user });
     });
@@ -160,6 +158,19 @@ export class PoodProvider extends Component {
       .catch(error => this.setState({ error }));
   };
 
+  handleLogout = () => {
+    // Clear data on logout
+    this.clearError();
+    this.clearLogList();
+    this.clearLog();
+    this.clearUser();
+    // Expire user token
+    TokenService.clearAuthToken();
+    // Remove token refresh and idle timers
+    TokenService.clearCallbackBeforeExpiry();
+    IdleService.unRegisterIdleResets();
+  };
+
   render() {
     const value = {
       logList: this.state.logList,
@@ -182,7 +193,8 @@ export class PoodProvider extends Component {
       setUser: this.setUser,
       updateUser: this.updateUser,
       clearUser: this.clearUser,
-      fetchLogList: this.fetchLogList
+      fetchLogList: this.fetchLogList,
+      handleLogout: this.handleLogout
     };
 
     // Provide access to context to all nested components

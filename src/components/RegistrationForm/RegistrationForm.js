@@ -40,7 +40,9 @@ export default class RegistrationForm extends Component {
         // Redirect to homepage if registry is succesful
         this.props.onRegistration();
       })
-      .catch(res => this.setState({ error: res.error }));
+      .catch(res => {
+        this.setState({ error: res.error });
+      });
   };
 
   render() {
@@ -89,9 +91,6 @@ export default class RegistrationForm extends Component {
                   className="password"
                   id="password"
                   placeholder="password"
-                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&]).{8,12}$"
-                  minLength="9"
-                  maxLength="72"
                   required
                 />
               </div>

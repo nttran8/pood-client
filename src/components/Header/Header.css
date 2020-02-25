@@ -41,12 +41,12 @@
   justify-content: space-evenly;
 }
 
-.navbar a {
+.navbar li {
   display: table;
   padding: 0 20px;
 }
 
-.navbar a li {
+.navbar li a {
   color: var(--color-comp-w);
   font-size: 14px;
   font-weight: 600;
@@ -64,9 +64,9 @@
 
   /* Navigation */
   .navbar {
-    float: right;
-    height: 100%;
-    display: table;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 
   .navbar a {
@@ -92,7 +92,7 @@
 
 @media only screen and (min-width: 768px) {
   .Header__container {
-    width: 60%;
+    width: 70%;
   }
 
   .navbar a {

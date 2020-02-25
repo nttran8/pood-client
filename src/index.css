@@ -33,7 +33,7 @@ section {
 
 .red {
   color: var(--color-triad-r);
-  font-size: 10px;
+  font-size: 14px;
   background-color: var(--color-comp-w);
   text-align: center;
 }

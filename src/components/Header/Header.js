@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 // Service
 import TokenService from "../../services/token-service";
-import IdleService from "../../services/idle-service";
 
 // Data
 import PoodContext from "../../contexts/PoodContext";
@@ -17,49 +16,56 @@ export default class Header extends Component {
   static contextType = PoodContext;
 
   handleLogout = () => {
-    // Clear data on logout
-    this.context.clearError();
-    this.context.clearLogList();
-    this.context.clearLog();
-    this.context.clearUser();
-    // Expire user token
-    TokenService.clearAuthToken();
-    // Remove token refresh and idle timers
-    TokenService.clearCallbackBeforeExpiry();
-    IdleService.unRegisterIdleResets();
+    // Log user out of session
+    this.context.handleLogout();
   };
 
   renderLoginLink() {
     // Headers for loggedout users
     return (
-      <div className="Header__login navbar">
-        <Link className="nav" to="/">
-          <li>Home</li>
-        </Link>
-        <Link className="nav" to="/register">
-          <li>Register</li>
-        </Link>
-      </div>
+      <ol className="Header__login navbar">
+        <li>
+          <Link className="nav" to="/">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link className="nav" to="/register">
+            Register
+          </Link>
+        </li>
+      </ol>
     );
   }
 
   renderLogoutLink() {
     // Headers for loggedin users
     return (
-      <div className="Header__logout navbar">
-        <Link className="nav" to="/">
-          <li>Home</li>
-        </Link>
-        <Link className="nav" to="/dashboard">
-          <li>Dashboard</li>
-        </Link>
-        <Link className="nav" to="/account">
-          <li>Account</li>
-        </Link>
-        <Link className="nav" onClick={this.handleLogout} to="/">
-          <li>Logout</li>
-        </Link>
-      </div>
+      <ol className="Header__logout navbar">
+        <li>
+          <Link className="nav" to="/">
+            Home
+          </Link>
+        </li>
+
+        <li>
+          <Link className="nav" to="/dashboard">
+            Dashboard
+          </Link>
+        </li>
+
+        <li>
+          <Link className="nav" to="/account">
+            Account
+          </Link>
+        </li>
+
+        <li>
+          <Link className="nav" onClick={this.handleLogout} to="/">
+            Logout
+          </Link>
+        </li>
+      </ol>
     );
   }
 

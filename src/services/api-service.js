@@ -88,7 +88,6 @@ const ApiService = {
   },
   // Edit user account
   patchUser(user) {
-    console.log(user);
     return fetch(`${config.API_ENDPOINT}/api/users/${user.id}`, {
       method: "PATCH",
       headers: {
@@ -96,7 +95,7 @@ const ApiService = {
         "content-type": "application/json"
       },
       body: JSON.stringify(user)
-    }).then(res => (!res.ok ? Promise.reject() : null));
+    }).then(res => (!res.ok ? res.json().then(e => Promise.reject(e)) : null));
   },
   // Add log
   postLog(log) {
@@ -107,7 +106,9 @@ const ApiService = {
         "content-type": "application/json"
       },
       body: JSON.stringify(log)
-    }).then(res => (!res.ok ? Promise.reject() : res.json()));
+    }).then(res =>
+      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
+    );
   },
   // Remove log
   deleteLog(logId) {
@@ -116,7 +117,7 @@ const ApiService = {
       headers: {
         authorization: `bearer ${TokenService.getAuthToken()}`
       }
-    }).then(res => (!res.ok ? Promise.reject() : null));
+    }).then(res => (!res.ok ? res.json().then(e => Promise.reject(e)) : null));
   },
   // Edit log
   patchLog(log) {
@@ -127,7 +128,7 @@ const ApiService = {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(log)
-    }).then(res => (!res.ok ? Promise.reject() : null));
+    }).then(res => (!res.ok ? res.json().then(e => Promise.reject(e)) : null));
   }
 };
 

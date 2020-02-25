@@ -61,28 +61,21 @@ export default class Dashboard extends Component {
 
   checkForEmptyList = () => {
     return this.context.logList && this.context.logList.length > 0 ? (
-      <>
-        <div className="DashboardPage__left">
-          <CreateButton className="logButton">
-            <Link to="/log">Add Log</Link>
-          </CreateButton>
-          <ul onClick={this.handleLogClick}>{this.renderLogList()}</ul>
-        </div>
-        <div className="DashboardPage__right">
-          <LogView />
-        </div>
-      </>
-    ) : (
-      <div className="DashboardPage__left">
-        <CreateButton className="logButton">
-          <Link to="/log">Add Log</Link>
-        </CreateButton>
-        <p>"Poop, your list is empty."</p>
-      </div>
-    );
+      <LogView />
+    ) : null;
   };
 
   render() {
-    return <div className="Dashboard">{this.checkForEmptyList()}</div>;
+    return (
+      <div className="Dashboard">
+        <div className="DashboardPage__left">
+          <Link to="/log">
+            <CreateButton className="logButton">Add Log</CreateButton>
+          </Link>
+          <ul onClick={this.handleLogClick}>{this.renderLogList()}</ul>
+        </div>
+        <div className="DashboardPage__right">{this.checkForEmptyList()}</div>
+      </div>
+    );
   }
 }

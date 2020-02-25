@@ -39,6 +39,7 @@ export default class Account extends Component {
 
     // Update user in context and database
     this.context.updateUser(user);
+    alert("Account is updated");
   };
 
   componentDidMount() {
@@ -124,22 +125,6 @@ export default class Account extends Component {
               required
             />
           </div>
-
-          {/* <label htmlFor='oldPassword'>Old Password</label>
-              <CreateInput 
-                className='oldPassword'
-                id='oldPassword'
-              />
-              <label htmlFor='password'>Password</label>
-              <CreateInput
-                className='password'
-                id='password'
-              />
-              <label htmlFor='confirmedPassword'>Confirmed Password</label>
-              <CreateInput
-                className='confirmedPassword'
-                id='confirmedPassword'
-              /> */}
 
           <CreateButton className="accountButton" type="submit">
             Update
