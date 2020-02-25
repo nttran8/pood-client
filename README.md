@@ -29,26 +29,31 @@ Deployed Server: https://frozen-dusk-57923.herokuapp.com
 
 ## Screens
 
-Users can register an account with a unique username
+#### Users can register an account with a unique username
+
 ![](images/Register.png)
 ![](images/Register-Validation1.png)
 ![](images/Register-Validation2.png)
 ![](images/Register-Validation3.png)
 ![](images/Register-Validation4.png)
 
-Users can log in with valid credentials
+#### Users can log in with valid credentials
+
 ![](images/Login.png)
 ![](images/Login-Validation.png)
 
-Users can view the dashboard
+#### Users can view the dashboard
+
 ![](images/Dashboard-EmptyList.png)
 
-Users can add, delete, and update logs
+#### Users can add, delete, and update logs
+
 ![](images/Log.png)
 ![](images/Log-Delete.png)
 ![](images/Log-Update.png)
 ![](images/Dashboard.png)
 
-Users can view and update account information
+#### Users can view and update account information
+
 ![](images/Account.png)
 ![](images/Account-Validation.png)
