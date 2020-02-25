@@ -11,6 +11,7 @@ https://pood-app.now.sh/
 ## API
 
 Server Repository: https://github.com/nttran8/pood-server
+
 Deployed Server: https://frozen-dusk-57923.herokuapp.com
 
 ## Technology used
