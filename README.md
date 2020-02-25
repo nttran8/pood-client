@@ -10,12 +10,13 @@ https://pood-app.now.sh/
 
 ## API
 
-https://github.com/nttran8/pood-server
-https://frozen-dusk-57923.herokuapp.com
+Server Repository: https://github.com/nttran8/pood-server
+Deployed Server: https://frozen-dusk-57923.herokuapp.com
 
 ## Technology used
 
 - HTML
+- Figma
 - CSS
 - Javascript
 - React
