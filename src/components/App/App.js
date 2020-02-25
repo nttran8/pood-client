@@ -1,4 +1,4 @@
-// Libraries
+// Library
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -9,7 +9,7 @@ import {
   faPoop
 } from "@fortawesome/free-solid-svg-icons";
 
-// Routes
+// Route
 import HomePage from "../../routes/HomePage/HomePage";
 import AccountPage from "../../routes/AccountPage/AccountPage";
 import DashboardPage from "../../routes/DashboardPage/DashboardPage";
@@ -17,7 +17,7 @@ import NewLogPage from "../../routes/NewLogPage/NewLogPage";
 import RegistrationPage from "../../routes/RegistrationPage/RegistrationPage";
 import NotFoundPage from "../../routes/NotFoundPage/NotFoundPage";
 
-// Services
+// Service
 import TokenService from "../../services/token-service";
 import ApiService from "../../services/api-service";
 import IdleService from "../../services/idle-service";

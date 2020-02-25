@@ -42,15 +42,14 @@
 }
 
 .navbar li {
-  display: table;
-  padding: 0 20px;
+  padding: 0 16px;
+  text-align: right;
 }
 
 .navbar li a {
   color: var(--color-comp-w);
   font-size: 14px;
   font-weight: 600;
-  text-align: right;
 }
 
 @media only screen and (min-width: 576px) {
@@ -59,7 +58,7 @@
   }
 
   .Header__container {
-    width: 85%;
+    width: 86%;
   }
 
   /* Navigation */
@@ -69,14 +68,14 @@
     align-items: center;
   }
 
-  .navbar a {
+  .navbar li {
     height: 100%;
     display: table;
     float: left;
     padding: 0px 15px;
   }
 
-  .navbar a li {
+  .navbar li a {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
