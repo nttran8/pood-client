@@ -37,6 +37,7 @@ export default class RegistrationForm extends Component {
         username.value = "";
         password.value = "";
 
+        alert("Registration success");
         // Redirect to homepage if registry is succesful
         this.props.onRegistration();
       })
