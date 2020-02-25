@@ -82,7 +82,7 @@ textarea::placeholder {
   }
 
   textarea::placeholder {
-    color: lightgray;
+    color: #686868;
   }
 }
 

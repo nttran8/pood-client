@@ -4,6 +4,9 @@ import React, { Component } from "react";
 // Component
 import { CreateButton, CreateInput } from "../Utils/Utils";
 
+// Service
+import ApiService from "../../services/api-service";
+
 // Data
 import PoodContext from "../../contexts/PoodContext";
 
@@ -22,7 +25,7 @@ export default class Account extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-
+    this.setState({ error: null });
     // Validate input
     if (event.currentTarget.email.value === "") {
       return alert("Email is required");
@@ -38,8 +41,13 @@ export default class Account extends Component {
     };
 
     // Update user in context and database
-    this.context.updateUser(user);
-    alert("Account is updated");
+    ApiService.patchUser(user)
+      .then(() => {
+        this.context.updateUser(user);
+        alert("Account is updated");
+        this.setState({ error: null });
+      })
+      .catch(res => this.setState({ error: res.error }));
   };
 
   componentDidMount() {
@@ -65,7 +73,6 @@ export default class Account extends Component {
           <div role="alert">
             {error && <p className="red accountError">{error}</p>}
           </div>
-
           <div className="inputForm dataBox">
             <label className="accountLabel" htmlFor="username">
               Username
@@ -78,7 +85,6 @@ export default class Account extends Component {
               onClick={() => this.setState({ error: "Cannot change username" })}
             />
           </div>
-
           <div className="inputForm dataBox">
             <label className="accountLabel" htmlFor="fullname">
               Fullname
@@ -89,7 +95,6 @@ export default class Account extends Component {
               defaultValue={fullname ? fullname : ""}
             />
           </div>
-
           <div className="dataBox">
             <label className="accountLabel">Gender</label>
             <div className="genderSelection">
@@ -113,7 +118,6 @@ export default class Account extends Component {
               <label htmlFor="male">male</label>
             </div>
           </div>
-
           <div className="inputForm dataBox">
             <label className="accountLabel" htmlFor="email">
               Email*
@@ -125,7 +129,6 @@ export default class Account extends Component {
               required
             />
           </div>
-
           <CreateButton className="accountButton" type="submit">
             Update
           </CreateButton>

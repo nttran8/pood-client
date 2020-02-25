@@ -36,19 +36,19 @@ export function CreateTextarea({ className, ...props }) {
 export function StyleDetail(style) {
   switch (style) {
     case "1":
-      return "CONSTIPATION: separate hard lumps, like nuts";
+      return "constipation - separate hard lumps, like nuts";
     case "2":
-      return "CONSTIPATION: sausage-shaped, but lumpy";
+      return "constipation - sausage-shaped, but lumpy";
     case "3":
-      return "AVERAGE: sausage-shaped, but with cracks";
+      return "average - sausage-shaped, but with cracks";
     case "4":
-      return "PERFECTION: sausage/snake shaped and smooth and soft";
+      return "perfection - sausage/snake shaped and smooth and soft";
     case "5":
-      return "LACK FIBER: soft blobs with clear cut edges";
+      return "lacking fiber - soft blobs with clear cut edges";
     case "6":
-      return "DIARRHEA: fluffly and mushy pieces";
+      return "diarrhea - fluffly and mushy pieces";
     case "7":
-      return "INFLAMMATION: watery";
+      return "inflammation - watery";
     default:
       return "";
   }

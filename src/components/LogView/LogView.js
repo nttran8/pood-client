@@ -69,7 +69,7 @@ export default class LogForm extends Component {
         className="note"
         id="note"
         value={this.context.log.note}
-        placeholder="Notes: clean poo and no smell"
+        placeholder="Clean wipe and no smell - score!"
         onChange={this.context.updateNote}
       />
     );
@@ -139,6 +139,7 @@ export default class LogForm extends Component {
             id="nickname"
             value={this.context.log ? this.context.log.nickname : ""}
             onChange={this.context.updateNickname}
+            required
           />
         </div>
 

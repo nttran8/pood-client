@@ -94,7 +94,7 @@ export default class LogForm extends Component {
           <CreateTextarea
             className="nickname"
             id="nickname"
-            placeholder="nickname"
+            placeholder="Minnie the poo"
             required
           />
         </div>
@@ -228,7 +228,7 @@ export default class LogForm extends Component {
           <CreateTextarea
             className="note"
             id="note"
-            placeholder="Notes: clean poo and no smell"
+            placeholder="Clean wipe and no smell - score!"
           />
         </div>
 

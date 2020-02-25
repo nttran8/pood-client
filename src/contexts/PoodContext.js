@@ -47,9 +47,7 @@ export class PoodProvider extends Component {
   };
 
   updateUser = user => {
-    ApiService.patchUser(user).then(() => {
-      this.setState({ user });
-    });
+    this.setState({ user });
   };
 
   clearUser = () => {
