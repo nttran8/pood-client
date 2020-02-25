@@ -63,9 +63,9 @@ export default class RegistrationForm extends Component {
                   <FontAwesomeIcon icon="user" />
                 </label>
                 <CreateInput
-                  className="username"
+                  className="username publicPlaceholder"
                   id="username"
-                  placeholder="username"
+                  placeholder="Username"
                   required
                 />
               </div>
@@ -75,9 +75,9 @@ export default class RegistrationForm extends Component {
                   <FontAwesomeIcon icon="envelope" />
                 </label>
                 <CreateInput
-                  className="email"
+                  className="email publicPlaceholder"
                   id="email"
-                  placeholder="email"
+                  placeholder="Email"
                   required
                 />
               </div>
@@ -88,9 +88,9 @@ export default class RegistrationForm extends Component {
                 </label>
                 <CreateInput
                   type="password"
-                  className="password"
+                  className="password publicPlaceholder"
                   id="password"
-                  placeholder="password"
+                  placeholder="Password"
                   required
                 />
               </div>

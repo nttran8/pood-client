@@ -26,6 +26,9 @@
   width: 260px;
 }
 
+.publicPlaceholder::placeholder {
+  color: #494949;
+}
 @media only screen and (min-width: 576px) {
   #demo {
     margin-top: 15px;

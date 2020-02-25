@@ -61,7 +61,7 @@ export default class LoginForm extends Component {
                 <FontAwesomeIcon icon="user" />
               </label>
               <CreateInput
-                className="username"
+                className="username publicPlaceholder"
                 id="username"
                 placeholder="Username"
               />
@@ -72,7 +72,7 @@ export default class LoginForm extends Component {
                 <FontAwesomeIcon icon="lock" />
               </label>
               <CreateInput
-                className="password"
+                className="password publicPlaceholder"
                 id="password"
                 type="password"
                 placeholder="Password"
