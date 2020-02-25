@@ -47,6 +47,16 @@ ul li:hover {
   cursor: pointer;
 }
 
+/* Message for empty list */
+.emptyMessage {
+  margin-top: 30px;
+  padding: 10px;
+  vertical-align: middle;
+  font-size: 18px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.3);
+}
+
 @media only screen and (min-width: 576px) {
   .Dashboard {
     margin: 10px 0 0 0;
@@ -89,5 +99,15 @@ ul li:hover {
 
   ul {
     width: 32vw;
+  }
+
+  /* Message for empty list */
+  .emptyMessage {
+    margin-top: 30px;
+    padding: 10px;
+    vertical-align: middle;
+    font-size: 18px;
+    font-weight: 600;
+    background: var(--color-comp-w);
   }
 }

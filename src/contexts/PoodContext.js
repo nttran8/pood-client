@@ -61,8 +61,6 @@ export class PoodProvider extends Component {
         log: newLog
       })
     );
-    console.log("state log", this.state.log);
-    console.log("state loglist", this.state.logList);
   };
 
   setLog = log => {

@@ -36,7 +36,9 @@ export default class Dashboard extends Component {
     const { logList } = this.context;
 
     if (logList.length === 0) {
-      return "Poop, your list is empty.";
+      return (
+        <p className="emptyMessage">Your list is empty. Dung forget to log!</p>
+      );
     }
 
     // Print each log on the list
