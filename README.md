@@ -43,8 +43,9 @@ Users can view the dashboard
 
 Users can add, delete, and update logs
 ![](images/Log.png)
-![](images/Dashboard.png)
 ![](images/Log-Delete.png)
+![](images/Log-Update.png)
+![](images/Dashboard.png)
 
 Users can view and update account information
 ![](images/Account.png)
