@@ -85,8 +85,8 @@ export default class LoginForm extends Component {
             </CreateButton>
 
             <p id="demo">
-              For a demo, log in with username "example" and password
-              "Example123!"
+              For a demo, log in with username " example " and password "
+              Example123! "
             </p>
           </div>
         </form>
