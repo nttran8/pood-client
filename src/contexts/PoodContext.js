@@ -57,7 +57,7 @@ export class PoodProvider extends Component {
   addLog = log => {
     ApiService.postLog(log).then(newLog =>
       this.setState({
-        logList: [...this.state.logList, newLog],
+        logList: [newLog, ...this.state.logList],
         log: newLog
       })
     );
