@@ -25,7 +25,7 @@ export default class RegisterPage extends Component {
     return (
       <section className="RegistrationPage">
         <div className="Page__left sec">
-          <p>Just doo it.</p>
+          <p>Let's doo it.</p>
           <img
             className="vision"
             src={registerImg}
