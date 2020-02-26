@@ -127,11 +127,17 @@ export class PoodProvider extends Component {
   };
 
   removeLog = () => {
-    ApiService.deleteLog(this.state.log.id);
-    this.setState({
-      logList: this.state.logList.filter(log => log.id !== this.state.log.id),
-      log: this.state.logList[0]
-    });
+    ApiService.deleteLog(this.state.log.id)
+      .then(() => {
+        this.setState({
+          logList: this.state.logList.filter(
+            log => log.id !== this.state.log.id
+          )
+        });
+      })
+      .then(() => {
+        this.setState({ log: this.state.logList[0] });
+      });
   };
 
   setError = error => {
