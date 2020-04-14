@@ -8,6 +8,11 @@ This app is made for everyone of all ages. Parents can use the app to log their 
 
 https://pood-app.now.sh/
 
+Demo login info:
+
+- Username: example
+- Password: Example123!
+
 ## API
 
 Server Repository: https://github.com/nttran8/pood-server

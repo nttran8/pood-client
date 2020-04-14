@@ -83,11 +83,6 @@ export default class LoginForm extends Component {
             <CreateButton type="button" onClick={this.props.onRegister}>
               Register
             </CreateButton>
-
-            <p id="demo">
-              For a demo, log in with username "example" and password
-              "Example123!"!
-            </p>
           </div>
         </form>
       </>
