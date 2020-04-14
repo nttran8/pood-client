@@ -2,16 +2,15 @@
 
 Poo'd app is an online stool diary that enable users to log their daily stool and maintain gut health.
 
-This app is made for everyone of all ages. Parents can use the app to log their newborn's stool and users with medical needs can use to monitor their gut health.
+This app is made for everyone of all ages. Parents can use the app to log their baby's stool and users with medical needs can use to monitor their gut health.
 
 ## Live App
 
 https://pood-app.now.sh/
 
-Demo login info:
-
-- Username: example
-- Password: Example123!
+Demo account
+Username: example
+Password: Example123!
 
 ## API
 
@@ -21,16 +20,20 @@ Deployed Server: https://frozen-dusk-57923.herokuapp.com
 
 ## Technology used
 
+Client
+
 - HTML
-- Figma
 - CSS
 - Javascript
 - React
-- Express
-- Node
-- Knex
-- PostgreSQL
-- JSONWebtoken
+
+Development Tools
+
+- VScode
+- Trello
+- Figma
+- Jest
+- Enzyme
 
 ## Screens
 
