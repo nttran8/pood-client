@@ -10,8 +10,9 @@ https://pood-app.now.sh/
 
 Demo account
 
-Username: example
-Password: Example123!
+| Username | Password    |
+| -------- | ----------- |
+| example  | Example123! |
 
 ## API
 
