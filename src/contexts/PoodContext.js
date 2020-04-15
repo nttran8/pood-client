@@ -141,7 +141,6 @@ export class PoodProvider extends Component {
   };
 
   setError = error => {
-    console.error(error);
     this.setState({ error });
   };
 

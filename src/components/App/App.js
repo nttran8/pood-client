@@ -42,8 +42,7 @@ export default class App extends Component {
   static contextType = PoodContext;
 
   static getDerivedStateFromError(err) {
-    // Log error in console and UI, if any
-    console.log(err);
+    // Show error if any
     return { error: true };
   }
 
