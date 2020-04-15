@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders NotFoundPage UI as expected 1`] = `
+<section
+  className="NotFoundPage"
+>
+  <h2
+    className="FourOhFour"
+  >
+    404
+  </h2>
+  <p>
+    Poop. There's nothing here...
+  </p>
+  <div
+    className="FourOhFourButton"
+  >
+    <button
+      className="button "
+      onClick={[Function]}
+    >
+      Back to home
+    </button>
+  </div>
+</section>
+`;

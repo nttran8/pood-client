@@ -1,0 +1,334 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<section
+  className="AccountPage"
+>
+  <h2>
+    Account Setting
+  </h2>
+  <form
+    className="AccountForm"
+    onSubmit={[Function]}
+  >
+    <div
+      role="alert"
+    />
+    <div
+      className="inputForm dataBox"
+    >
+      <label
+        className="accountLabel"
+        htmlFor="username"
+      >
+        Username
+      </label>
+      <input
+        className="input acc-username"
+        id="username"
+        onClick={[Function]}
+        readOnly={true}
+      />
+    </div>
+    <div
+      className="inputForm dataBox"
+    >
+      <label
+        className="accountLabel"
+        htmlFor="fullname"
+      >
+        Fullname
+      </label>
+      <input
+        className="input fullname"
+        defaultValue=""
+        id="fullname"
+      />
+    </div>
+    <div
+      className="dataBox"
+    >
+      <label
+        className="accountLabel"
+      >
+        Gender
+      </label>
+      <div
+        className="genderSelection"
+      >
+        <input
+          checked={false}
+          className="input "
+          id="female"
+          name="gender"
+          onChange={[Function]}
+          type="radio"
+          value="female"
+        />
+        <label
+          htmlFor="female"
+        >
+          female
+        </label>
+        <input
+          checked={false}
+          className="input "
+          id="male"
+          name="gender"
+          onChange={[Function]}
+          type="radio"
+          value="male"
+        />
+        <label
+          htmlFor="male"
+        >
+          male
+        </label>
+      </div>
+    </div>
+    <div
+      className="inputForm dataBox"
+    >
+      <label
+        className="accountLabel"
+        htmlFor="email"
+      >
+        Email*
+      </label>
+      <input
+        className="input email"
+        id="email"
+        required={true}
+      />
+    </div>
+    <button
+      className="button accountButton"
+      type="submit"
+    >
+      Update
+    </button>
+  </form>
+</section>
+`;
+
+exports[`Renders AccountPage UI as expected 1`] = `
+<section
+  className="AccountPage"
+>
+  <h2>
+    Account Setting
+  </h2>
+  <form
+    className="AccountForm"
+    onSubmit={[Function]}
+  >
+    <div
+      role="alert"
+    />
+    <div
+      className="inputForm dataBox"
+    >
+      <label
+        className="accountLabel"
+        htmlFor="username"
+      >
+        Username
+      </label>
+      <input
+        className="input acc-username"
+        id="username"
+        onClick={[Function]}
+        readOnly={true}
+      />
+    </div>
+    <div
+      className="inputForm dataBox"
+    >
+      <label
+        className="accountLabel"
+        htmlFor="fullname"
+      >
+        Fullname
+      </label>
+      <input
+        className="input fullname"
+        defaultValue=""
+        id="fullname"
+      />
+    </div>
+    <div
+      className="dataBox"
+    >
+      <label
+        className="accountLabel"
+      >
+        Gender
+      </label>
+      <div
+        className="genderSelection"
+      >
+        <input
+          checked={false}
+          className="input "
+          id="female"
+          name="gender"
+          onChange={[Function]}
+          type="radio"
+          value="female"
+        />
+        <label
+          htmlFor="female"
+        >
+          female
+        </label>
+        <input
+          checked={false}
+          className="input "
+          id="male"
+          name="gender"
+          onChange={[Function]}
+          type="radio"
+          value="male"
+        />
+        <label
+          htmlFor="male"
+        >
+          male
+        </label>
+      </div>
+    </div>
+    <div
+      className="inputForm dataBox"
+    >
+      <label
+        className="accountLabel"
+        htmlFor="email"
+      >
+        Email*
+      </label>
+      <input
+        className="input email"
+        id="email"
+        required={true}
+      />
+    </div>
+    <button
+      className="button accountButton"
+      type="submit"
+    >
+      Update
+    </button>
+  </form>
+</section>
+`;
+
+exports[`Renders EndPage UI as expected 1`] = `
+<section
+  className="AccountPage"
+>
+  <h2>
+    Account Setting
+  </h2>
+  <form
+    className="AccountForm"
+    onSubmit={[Function]}
+  >
+    <div
+      role="alert"
+    />
+    <div
+      className="inputForm dataBox"
+    >
+      <label
+        className="accountLabel"
+        htmlFor="username"
+      >
+        Username
+      </label>
+      <input
+        className="input acc-username"
+        id="username"
+        onClick={[Function]}
+        readOnly={true}
+      />
+    </div>
+    <div
+      className="inputForm dataBox"
+    >
+      <label
+        className="accountLabel"
+        htmlFor="fullname"
+      >
+        Fullname
+      </label>
+      <input
+        className="input fullname"
+        defaultValue=""
+        id="fullname"
+      />
+    </div>
+    <div
+      className="dataBox"
+    >
+      <label
+        className="accountLabel"
+      >
+        Gender
+      </label>
+      <div
+        className="genderSelection"
+      >
+        <input
+          checked={false}
+          className="input "
+          id="female"
+          name="gender"
+          onChange={[Function]}
+          type="radio"
+          value="female"
+        />
+        <label
+          htmlFor="female"
+        >
+          female
+        </label>
+        <input
+          checked={false}
+          className="input "
+          id="male"
+          name="gender"
+          onChange={[Function]}
+          type="radio"
+          value="male"
+        />
+        <label
+          htmlFor="male"
+        >
+          male
+        </label>
+      </div>
+    </div>
+    <div
+      className="inputForm dataBox"
+    >
+      <label
+        className="accountLabel"
+        htmlFor="email"
+      >
+        Email*
+      </label>
+      <input
+        className="input email"
+        id="email"
+        required={true}
+      />
+    </div>
+    <button
+      className="button accountButton"
+      type="submit"
+    >
+      Update
+    </button>
+  </form>
+</section>
+`;

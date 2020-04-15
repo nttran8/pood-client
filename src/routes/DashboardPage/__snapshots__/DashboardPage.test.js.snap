@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders DashboardPage UI as expected 1`] = `
+<section
+  className="DashboardPage"
+>
+  <div
+    className="Dashboard"
+  >
+    <div
+      className="DashboardPage__left"
+    >
+      <a
+        href="/log"
+        onClick={[Function]}
+      >
+        <button
+          className="button logButton"
+        >
+          Add Log
+        </button>
+      </a>
+      <ul
+        onClick={[Function]}
+      >
+        <p
+          className="emptyMessage"
+        >
+          Your list is empty. Dung forget to log!
+        </p>
+      </ul>
+    </div>
+    <div
+      className="DashboardPage__right"
+    />
+  </div>
+</section>
+`;

@@ -1,0 +1,295 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders NewLogPage UI as expected 1`] = `
+<section
+  className="NewLogPage"
+>
+  <h2>
+    Log the Log
+  </h2>
+  <form
+    className="LogForm"
+    onSubmit={[Function]}
+  >
+    <p
+      className="today"
+    >
+      April 14th, 11:49 pm
+    </p>
+    <div
+      className="inputForm dataBox"
+    >
+      <label
+        className="logLabel"
+        htmlFor="nickname"
+      >
+        Nickname*
+      </label>
+      <textarea
+        className="Textarea nickname"
+        id="nickname"
+        placeholder="Minnie the poo"
+        required={true}
+      />
+    </div>
+    <div
+      className="dataBox"
+    >
+      <label
+        className="logLabel"
+        htmlFor="style"
+      >
+        Appearance*
+        <span
+          className="styleDetail"
+        >
+          
+        </span>
+      </label>
+      <div
+        className="logSelection"
+      >
+        <label>
+          <input
+            name="style"
+            onChange={[Function]}
+            type="radio"
+            value="1"
+          />
+          <img
+            alt="type 1: separate hard lumps"
+            src="type1.svg"
+          />
+        </label>
+        <label>
+          <input
+            name="style"
+            onChange={[Function]}
+            type="radio"
+            value="2"
+          />
+          <img
+            alt="type 2: lumpy and sausage like"
+            src="type2.svg"
+          />
+        </label>
+        <label>
+          <input
+            name="style"
+            onChange={[Function]}
+            type="radio"
+            value="3"
+          />
+          <img
+            alt="type 3: sausage shape with cracks"
+            src="type3.svg"
+          />
+        </label>
+        <label>
+          <input
+            name="style"
+            onChange={[Function]}
+            type="radio"
+            value="4"
+          />
+          <img
+            alt="type 4: smooth soft sausage"
+            src="type4.svg"
+          />
+        </label>
+        <label>
+          <input
+            name="style"
+            onChange={[Function]}
+            type="radio"
+            value="5"
+          />
+          <img
+            alt="type 5: soft blobs with clear edges"
+            src="type5.svg"
+          />
+        </label>
+        <label>
+          <input
+            name="style"
+            onChange={[Function]}
+            type="radio"
+            value="6"
+          />
+          <img
+            alt="type 6: mushy consistency"
+            src="type6.svg"
+          />
+        </label>
+        <label>
+          <input
+            name="style"
+            onChange={[Function]}
+            type="radio"
+            value="7"
+          />
+          <img
+            alt="type 7: liquid consistency"
+            src="type7.svg"
+          />
+        </label>
+      </div>
+    </div>
+    <div
+      className="dataBox"
+    >
+      <label
+        className="logLabel"
+        htmlFor="color"
+      >
+        Color*
+      </label>
+      <div
+        className="color logSelection"
+      >
+        <label>
+          <input
+            name="color"
+            type="radio"
+            value="gray"
+          />
+          <img
+            alt="gray"
+            src="gray.svg"
+          />
+        </label>
+        <label>
+          <input
+            name="color"
+            type="radio"
+            value="red"
+          />
+          <img
+            alt="red"
+            src="red.svg"
+          />
+        </label>
+        <label>
+          <input
+            name="color"
+            type="radio"
+            value="yellow"
+          />
+          <img
+            alt="yellow"
+            src="yellow.svg"
+          />
+        </label>
+        <label>
+          <input
+            name="color"
+            type="radio"
+            value="green"
+          />
+          <img
+            alt="green"
+            src="green.svg"
+          />
+        </label>
+        <label>
+          <input
+            name="color"
+            type="radio"
+            value="brown"
+          />
+          <img
+            alt="brown"
+            src="brown.svg"
+          />
+        </label>
+        <label>
+          <input
+            name="color"
+            type="radio"
+            value="black"
+          />
+          <img
+            alt="black"
+            src="black.svg"
+          />
+        </label>
+      </div>
+    </div>
+    <div
+      className="dataBox"
+    >
+      <label
+        className="logLabel"
+        htmlFor="amount"
+      >
+        Amount*
+      </label>
+      <div
+        className="amount logSelection"
+      >
+        <input
+          id="little"
+          name="amount"
+          type="radio"
+          value="little"
+        />
+        <label
+          htmlFor="little"
+        >
+          not much
+        </label>
+        <input
+          id="normal"
+          name="amount"
+          type="radio"
+          value="normal"
+        />
+        <label
+          htmlFor="normal"
+        >
+          normal
+        </label>
+        <input
+          id="a lot"
+          name="amount"
+          type="radio"
+          value="a lot"
+        />
+        <label
+          htmlFor="a lot"
+        >
+          so much
+        </label>
+      </div>
+    </div>
+    <div
+      className="inputForm dataBox"
+    >
+      <label
+        className="logLabel"
+        htmlFor="note"
+      >
+        Note
+      </label>
+      <textarea
+        className="Textarea note"
+        id="note"
+        placeholder="Clean wipe and no smell - score!"
+      />
+    </div>
+    <button
+      className="button logButton"
+      type="submit"
+    >
+      Add
+    </button>
+    <button
+      className="button logButton"
+      onClick={[Function]}
+      type="button"
+    >
+      Cancel
+    </button>
+  </form>
+</section>
+`;
